@@ -1,0 +1,13 @@
+package:
+  id: 13-tests
+  runtime: node
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: true
+  installMode: install
+settings:
+  timeoutMs: 120000
+  coverageEnabled: false
+  failOnSkippedTests: false
+  reporter: spec

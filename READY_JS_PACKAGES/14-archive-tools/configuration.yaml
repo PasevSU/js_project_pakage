@@ -1,0 +1,17 @@
+package:
+  id: 14-archive-tools
+  runtime: node
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: true
+  installMode: install
+settings:
+  network: bitcoin-mainnet
+  apiBaseUrl: https://mempool.space/api
+  startDate: ""
+  endDate: ""
+  archiveDirectory: archives
+  maxArchiveSizeMb: 2048
+  checkpointEnabled: true
+  dryRun: true

@@ -1,0 +1,13 @@
+package:
+  id: 90-legacy-pakages
+  runtime: legacy
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: false
+  installMode: install
+settings:
+  readOnly: true
+  allowExecution: false
+  allowNetworkAccess: false
+  reportFormat: json

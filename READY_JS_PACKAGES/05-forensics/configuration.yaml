@@ -1,0 +1,16 @@
+package:
+  id: 05-forensics
+  runtime: node
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: true
+  installMode: install
+settings:
+  hashAlgorithm: sha256
+  maxFileSizeMb: 1024
+  maxEmailSizeMb: 50
+  includeDecodedEmailBody: true
+  recursiveScan: true
+  followSymbolicLinks: false
+  reportFormat: json

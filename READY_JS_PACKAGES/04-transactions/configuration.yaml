@@ -1,0 +1,14 @@
+package:
+  id: 04-transactions
+  runtime: node
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: true
+  installMode: install
+settings:
+  network: bitcoin-mainnet
+  confirmationThreshold: 6
+  maxRetries: 3
+  retryDelayMs: 1000
+  broadcastTimeoutMs: 30000

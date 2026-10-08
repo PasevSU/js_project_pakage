@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-10-08T23:41:28.807Z",
+  "package": "evidence-object-email-core",
+  "status": "BLOCKED",
+  "checks": {
+    "function_inventory": {
+      "status": "PASS",
+      "expected": 25,
+      "found": 25,
+      "modules": [
+        "01_canonical_source_rendering.js",
+        "02_line_geometry_detection.js",
+        "03_search_zones.js",
+        "04_object_boundary_detection.js",
+        "05_screenshot_provenance.js",
+        "06_blue_recognition_object.js",
+        "07_yellow_shape_recognition.js",
+        "08_green_semantic_ocr.js",
+        "09_darkblue_structured_parsing.js",
+        "10_magenta_identity_resolution.js",
+        "11_red_zero_persistence.js",
+        "12_ocr_multipass.js",
+        "13_bbox_remapping.js",
+        "14_word_clustering.js",
+        "15_disagreement_preservation.js",
+        "16_hash_selection.js",
+        "17_raw_text_hash.js",
+        "18_canonical_text_hash.js",
+        "19_structured_hash.js",
+        "20_exact_visual_hash.js",
+        "21_anonymization_preview.js",
+        "22_irreversible_redaction.js",
+        "23_profile_version_hash.js",
+        "24_identity_profile_version_hash.js",
+        "25_provenance_reconstruction.js"
+      ]
+    },
+    "node_tests": {
+      "status": "PASS",
+      "stdout": "✔ EML parses deterministic headers, transport, and authentication metadata (7.0289ms)\n✔ configured size limit rejects an oversized email (0.6261ms)\n✔ decoded email content can be excluded while hashes and metadata remain (1.0213ms)\n✔ multipass creates exactly A1+B1+B2+C1+C2+C3 (0.3089ms)\n✔ blue persists object but not OCR text policy (0.3051ms)\n✔ yellow apply mode disables text OCR (0.2448ms)\n✔ green persists semantic OCR (0.2091ms)\n✔ dark-blue DATE parses without changing raw value (0.4147ms)\n✔ magenta identity can overlap structured object (0.6402ms)\n✔ red is purged and cannot persist (0.6014ms)\n✔ bbox remapping is deterministic (0.2468ms)\n✔ word disagreement is preserved (0.4924ms)\n✔ hash selection exposes partial token intersections (0.1646ms)\n✔ raw and canonical text hashes are distinct contracts (0.2242ms)\n✔ structured hash ignores object key insertion order (0.1594ms)\n✔ canonical pixel hash is domain separated (0.2641ms)\n✔ redaction plan cannot be marked verified without checks (0.4052ms)\n✔ profile hashes are version-sensitive (0.6784ms)\n✔ provenance path reconstructs (0.2783ms)\n✔ sample JSON is deterministic (1.0004ms)\nℹ tests 20\nℹ suites 0\nℹ pass 20\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 165.394\n",
+      "stderr": ""
+    },
+    "sample_eml": {
+      "status": "PASS",
+      "source_sha256": "af5d3f78df6ce268358256dd1562a67d9df943d906bca288ae4362ceb9b22446",
+      "received_hops": 1,
+      "headers": 8,
+      "decoded_body_included": true
+    },
+    "external_engine_qualification": [
+      {
+        "function": "canonical PDF/source renderer end-to-end",
+        "status": "NOT_VERIFIED",
+        "reason": "requires actual PDF/image renderer execution and independent pixel verification"
+      },
+      {
+        "function": "OCR engine execution for six crops",
+        "status": "NOT_VERIFIED",
+        "reason": "core creates/records six observations but no OCR engine is bundled"
+      },
+      {
+        "function": "shape/image matcher benchmark",
+        "status": "NOT_VERIFIED",
+        "reason": "descriptor storage contract exists; matcher threshold must be benchmarked on real scans"
+      },
+      {
+        "function": "irreversible PDF redaction end-to-end",
+        "status": "NOT_VERIFIED",
+        "reason": "plan/verification gate exists; actual PDF content-stream redaction engine is external"
+      }
+    ]
+  },
+  "release_gate": "BLOCKED_UNTIL_ALL_REQUIRED_EXTERNAL_ENGINE_CHECKS_PASS"
+}

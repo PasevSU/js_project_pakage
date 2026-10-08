@@ -1,0 +1,23 @@
+{
+  "profile_id": "PERSON-EXAMPLE-001",
+  "version": 1,
+  "entity_type": "PERSON",
+  "name_components": {
+    "given": "ExampleGiven",
+    "patronymic": "ExampleMiddle",
+    "surname": "ExampleSurname"
+  },
+  "confirmed_variants": [
+    "ExampleSurname, ExampleGiven ExampleMiddle",
+    "ExampleGiven ExampleMiddle ExampleSurname",
+    "ExampleGiven ExampleSurname"
+  ],
+  "ambiguous_variants": ["ExampleGiven", "ExampleSurname"],
+  "anonymization_policy": {
+    "full_name": true,
+    "given_name_alone": "review",
+    "surname_alone": "review",
+    "birth_date": true,
+    "address": true
+  }
+}
