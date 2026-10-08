@@ -1,0 +1,14 @@
+package:
+  id: 16-mempool-js
+  runtime: node
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: true
+  installMode: install
+settings:
+  hostname: mempool.space
+  network: ""
+  protocol: https
+  requestTimeoutMs: 15000
+  cacheTtlSeconds: 30

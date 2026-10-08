@@ -1,0 +1,14 @@
+package:
+  id: 09-ui-app
+  runtime: browser
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: true
+  installMode: install
+settings:
+  locale: en
+  theme: system
+  apiBaseUrl: http://127.0.0.1:3000
+  telemetryEnabled: false
+  requestTimeoutMs: 15000

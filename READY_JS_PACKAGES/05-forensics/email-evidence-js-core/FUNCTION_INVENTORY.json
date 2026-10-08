@@ -1,0 +1,157 @@
+{
+  "inventory_version": "0.1.0",
+  "required_functions": 25,
+  "items": [
+    {
+      "id": "01",
+      "module": "src/functions/01_canonical_source_rendering.js",
+      "json_path": "rendering.canonical",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "02",
+      "module": "src/functions/02_line_geometry_detection.js",
+      "json_path": "geometry.lines[]",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "03",
+      "module": "src/functions/03_search_zones.js",
+      "json_path": "geometry.search_zones[]",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "04",
+      "module": "src/functions/04_object_boundary_detection.js",
+      "json_path": "geometry.object_boundaries[]",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "05",
+      "module": "src/functions/05_screenshot_provenance.js",
+      "json_path": "objects[].capture",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "06",
+      "module": "src/functions/06_blue_recognition_object.js",
+      "json_path": "objects[] / recognition.visual",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "07",
+      "module": "src/functions/07_yellow_shape_recognition.js",
+      "json_path": "objects[] / recognition.shape",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "08",
+      "module": "src/functions/08_green_semantic_ocr.js",
+      "json_path": "objects[] / semantic.text",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "09",
+      "module": "src/functions/09_darkblue_structured_parsing.js",
+      "json_path": "objects[].structured",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "10",
+      "module": "src/functions/10_magenta_identity_resolution.js",
+      "json_path": "objects[].identity",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "11",
+      "module": "src/functions/11_red_zero_persistence.js",
+      "json_path": "no persistent path (purge)",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "12",
+      "module": "src/functions/12_ocr_multipass.js",
+      "json_path": "ocr.observation_sets[]",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "13",
+      "module": "src/functions/13_bbox_remapping.js",
+      "json_path": "coordinate transform helper",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "14",
+      "module": "src/functions/14_word_clustering.js",
+      "json_path": "word clustering computation",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "15",
+      "module": "src/functions/15_disagreement_preservation.js",
+      "json_path": "ocr.word_clusters[] + ocr.disagreements[]",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "16",
+      "module": "src/functions/16_hash_selection.js",
+      "json_path": "hash_selection.selections[]",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "17",
+      "module": "src/functions/17_raw_text_hash.js",
+      "json_path": "hashes.raw_text.*",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "18",
+      "module": "src/functions/18_canonical_text_hash.js",
+      "json_path": "hashes.canonical_text.*",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "19",
+      "module": "src/functions/19_structured_hash.js",
+      "json_path": "hashes.structured.*",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "20",
+      "module": "src/functions/20_exact_visual_hash.js",
+      "json_path": "hashes.visual.*",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "21",
+      "module": "src/functions/21_anonymization_preview.js",
+      "json_path": "anonymization.preview[]",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "22",
+      "module": "src/functions/22_irreversible_redaction.js",
+      "json_path": "anonymization.redaction_plans[]",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "23",
+      "module": "src/functions/23_profile_version_hash.js",
+      "json_path": "profiles.document[]",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "24",
+      "module": "src/functions/24_identity_profile_version_hash.js",
+      "json_path": "profiles.identity[]",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    },
+    {
+      "id": "25",
+      "module": "src/functions/25_provenance_reconstruction.js",
+      "json_path": "provenance.nodes[] + provenance.edges[]",
+      "implementation": "PRESENT_AND_UNIT_TESTED"
+    }
+  ],
+  "release_note": "External engine end-to-end qualification is tracked separately in audit_report.json and blocks release."
+}

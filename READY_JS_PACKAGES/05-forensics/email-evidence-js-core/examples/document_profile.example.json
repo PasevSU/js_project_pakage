@@ -1,0 +1,21 @@
+{
+  "profile_id": "EXAMPLE-LETTER-PROFILE",
+  "version": 1,
+  "organization": "EXAMPLE",
+  "document_class": "LETTER",
+  "coordinate_space": "normalized-document",
+  "anchors": [
+    {"zone_id":"ZONE-LOGO","machine_type":"recognition.shape","required":true,"bbox":{"x":0.05,"y":0.03,"w":0.28,"h":0.15},"role":"LOGO"},
+    {"zone_id":"ZONE-CONTACT","machine_type":"semantic.structured","required":true,"bbox":{"x":0.60,"y":0.10,"w":0.34,"h":0.25},"role":"CONTACT_BLOCK"}
+  ],
+  "spatial_graph": [
+    {"from":"ZONE-LOGO","relation":"LEFT_OF","to":"ZONE-CONTACT"}
+  ],
+  "field_schema": [
+    {"field_type":"TELEPHONE","datatype":"TELEPHONE"},
+    {"field_type":"FAX","datatype":"FAX"},
+    {"field_type":"DOCUMENT_REFERENCE","datatype":"DOCUMENT_REFERENCE"},
+    {"field_type":"DOCUMENT_DATE","datatype":"DATE"},
+    {"field_type":"PERSON_NAME","datatype":"PERSON_NAME"}
+  ]
+}

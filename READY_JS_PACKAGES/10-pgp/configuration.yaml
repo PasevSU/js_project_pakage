@@ -1,0 +1,14 @@
+package:
+  id: 10-pgp
+  runtime: node
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: true
+  installMode: install
+settings:
+  keyType: ecc
+  curve: ed25519
+  requirePassphrase: true
+  minimumPassphraseLength: 12
+  armor: true

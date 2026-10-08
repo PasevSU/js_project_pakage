@@ -1,0 +1,17 @@
+package:
+  id: 08-pdf-report
+  runtime: node
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: true
+  installMode: install
+settings:
+  pageSize: A4
+  orientation: portrait
+  locale: en-US
+  outputDirectory: reports
+  title: Evidence report
+  includeTimestamp: true
+  marginMm: 18
+  fontSizePt: 10

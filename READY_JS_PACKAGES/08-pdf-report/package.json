@@ -1,0 +1,20 @@
+{
+  "name": "pasevsu-pdf-report",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PDF evidence reports configured by configuration.yaml",
+  "bin": {
+    "pdf-report": "./cli.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "jspdf": "4.2.1",
+    "yaml": "^2.8.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

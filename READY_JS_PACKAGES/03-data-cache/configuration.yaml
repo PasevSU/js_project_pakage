@@ -1,0 +1,13 @@
+package:
+  id: 03-data-cache
+  runtime: browser
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: true
+  installMode: install
+settings:
+  defaultTtlSeconds: 300
+  maxEntries: 1000
+  staleWhileRevalidate: true
+  persistToStorage: true

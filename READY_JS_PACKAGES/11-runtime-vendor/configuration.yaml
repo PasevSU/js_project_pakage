@@ -1,0 +1,13 @@
+package:
+  id: 11-runtime-vendor
+  runtime: browser
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: false
+  installMode: install
+settings:
+  allowBundleExecution: false
+  verifyIntegrity: true
+  integrityAlgorithm: sha384
+  allowNetworkLoading: false

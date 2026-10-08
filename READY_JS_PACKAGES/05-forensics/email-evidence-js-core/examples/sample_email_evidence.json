@@ -1,0 +1,1084 @@
+{
+  "schema_version": "0.1.0",
+  "evidence_id": "EXAMPLE-EML-20230420",
+  "source": {
+    "kind": "email/rfc822",
+    "filename": "2023_04_20_-_08_18_-_CAF8B92E_-_MAIL_RE3_FWD1_-_Antrag_Familienhilfe_-_lbloemer@stadtdo.de.eml",
+    "byte_length": 15818,
+    "hashes": {
+      "crc32": "7e8ea516",
+      "md5": "532bb914be80171ae241259aafd75730",
+      "sha1": "c101f2e7e93d474aa52afdeb59efde1a67a02821",
+      "sha256": "a43a6b94fc78f162795e608cf3303394b4e2c780e6acdc2faeb5957f29b58d16",
+      "sha512": "0745ce2a25bf676ebba23be166f9660f43e9663519b36f7cca9b39449b264bb20018d6c521fb96e9e976c6291330e0e5d89f68b084b99fd751d950bd5b0ef3dd"
+    }
+  },
+  "email": {
+    "envelope": {
+      "return_path": "<prvs=7474414084=lbloemer@stadtdo.de>",
+      "delivered_to": "kristibelnikolova@gmail.com"
+    },
+    "message": {
+      "message_id": "<OF51C48196.167018D7-ONC1258997.002D757C-C1258997.002DA269@stadtdo.de>",
+      "subject": "Antwort: Re: Re: Fwd: Antrag Familienhilfe",
+      "date_raw": "Thu, 20 Apr 2023 10:18:26 +0200",
+      "date_iso": "2023-04-20T08:18:26.000Z",
+      "from": [
+        {
+          "name": null,
+          "address": "lbloemer@stadtdo.de"
+        }
+      ],
+      "to": [
+        {
+          "name": null,
+          "address": "kristibelnikolova@gmail.com"
+        }
+      ],
+      "cc": [
+        {
+          "name": null,
+          "address": "bahceci@schoepper-und-kollegen.de"
+        },
+        {
+          "name": null,
+          "address": "kontakt@institut-bartoschek.de"
+        }
+      ],
+      "bcc": [],
+      "reply_to": [],
+      "participants": [
+        "lbloemer@stadtdo.de",
+        "kristibelnikolova@gmail.com",
+        "bahceci@schoepper-und-kollegen.de",
+        "kontakt@institut-bartoschek.de"
+      ]
+    },
+    "thread": {
+      "in_reply_to": [
+        "<CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>"
+      ],
+      "references": [
+        "<CANozcoNys9XJszVUNk=iGpZvc+VmTTO6qc_v8AkCs7J1S6NMDQ@mail.gmail.com>",
+        "<CANozcoN=r2n=XCJ5sB2PULWQ6qwL7cN10Wk-nz0JB-bbovUpig@mail.gmail.com>",
+        "<OF78B6D46C.B35822DE-ONC1258994.002EC1B6-C1258994.002EE843@stadtdo.de>",
+        "<CANozcoNNocbZvxfq9VGp_Vbf1gUTbZr8xFVFgnvV4EoE8bab0g@mail.gmail.com>",
+        "<OFBB8B2EFF.B67FF5A0-ONC1258994.0033C0C9-C1258994.003402E0@stadtdo.de>",
+        "<CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>"
+      ],
+      "quoted": {
+        "messages": [
+          {
+            "source": "quoted-body",
+            "from": "\"Kristi Belnikolova\" <kristibelnikolova@gmail.com>",
+            "to": "lbloemer@stadtdo.de, kontakt@institut-bartoschek.de,",
+            "date": "17.04.2023 11:40",
+            "subject": "Re: Re: Fwd: Antrag Familienhilfe",
+            "start_line": 25
+          },
+          {
+            "source": "quoted-body",
+            "from": "\"Kristi Belnikolova\" <kristibelnikolova@gmail.com>",
+            "to": "lbloemer@stadtdo.de, kontakt@institut-bartoschek.de,",
+            "date": "17.04.2023 10:41",
+            "subject": "Re: Fwd: Antrag Familienhilfe",
+            "start_line": 75
+          },
+          {
+            "source": "quoted-body",
+            "from": "\"Kristi Belnikolova\" <kristibelnikolova@gmail.com>",
+            "to": "bahceci@schoepper-und-kollegen.de,",
+            "date": "05.04.2023 09:12",
+            "subject": "Fwd: Antrag Familienhilfe",
+            "start_line": 136
+          },
+          {
+            "source": "quoted-body",
+            "from": "Kristi Belnikolova <kristibelnikolova@gmail.com>",
+            "to": "<lbloemer@stadtdo.de>, <kontakt@institut-bartoschek.de>, <",
+            "date": "пт, 31.03.2023 г., 13:38 ч.",
+            "subject": "Antrag Familienhilfe",
+            "start_line": 222
+          }
+        ],
+        "forwarded_markers": [
+          {
+            "line": 221,
+            "marker": "---------- Forwarded message ---------"
+          }
+        ]
+      }
+    },
+    "transport": {
+      "received": [
+        {
+          "index": 0,
+          "raw": "by 2002:aa6:c3a8:0:b0:258:b864:78 with SMTP id a8csp231886lkq; Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "from": null,
+          "by": "2002:aa6:c3a8:0:b0:258:b864:78",
+          "ip_addresses": [],
+          "id": "a8csp231886lkq",
+          "protocol": "SMTP",
+          "tls": null,
+          "timestamp_raw": "Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        },
+        {
+          "index": 1,
+          "raw": "from domgate01.stadtdo.de (mail.stadtdo.de. [45.82.172.40]) by mx.google.com with ESMTPS id m5-20020a7bce05000000b003ee4d160f3csi3138990wmc.212.2023.04.20.01.18.27 for <kristibelnikolova@gmail.com> (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128); Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "from": "domgate01.stadtdo.de",
+          "by": "mx.google.com",
+          "ip_addresses": [
+            "45.82.172.40"
+          ],
+          "id": "m5-20020a7bce05000000b003ee4d160f3csi3138990wmc.212.2023.04.20.01.18.27",
+          "protocol": "ESMTPS",
+          "tls": {
+            "version": "TLS1_2",
+            "cipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+            "bits": "128/128"
+          },
+          "timestamp_raw": "Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        },
+        {
+          "index": 2,
+          "raw": "from domgate0.stadtdo.de ( [172.18.118.133]) by domgate01.stadtdo.de (DO) with SMTP id DA.C8.03368.355F0446; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "from": "domgate0.stadtdo.de",
+          "by": "domgate01.stadtdo.de",
+          "ip_addresses": [
+            "172.18.118.133"
+          ],
+          "id": "DA.C8.03368.355F0446",
+          "protocol": "SMTP",
+          "tls": null,
+          "timestamp_raw": "Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        },
+        {
+          "index": 3,
+          "raw": "from bkpvps02.stadtdo.de (bkpvps02.stadtdo.de [172.30.14.53]) by domgate0.stadtdo.de (Postfix) with ESMTP id 536A74A014; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "from": "bkpvps02.stadtdo.de",
+          "by": "domgate0.stadtdo.de",
+          "ip_addresses": [
+            "172.30.14.53"
+          ],
+          "id": "536A74A014",
+          "protocol": "ESMTP",
+          "tls": null,
+          "timestamp_raw": "Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        },
+        {
+          "index": 4,
+          "raw": "from bkpvps02.stadtdo.de (localhost.localdomain [127.0.0.1]) by bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2D79AA013E; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "from": "bkpvps02.stadtdo.de",
+          "by": "bkpvps02.stadtdo.de",
+          "ip_addresses": [
+            "127.0.0.1"
+          ],
+          "id": "2D79AA013E",
+          "protocol": "ESMTPS",
+          "tls": null,
+          "timestamp_raw": "Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        },
+        {
+          "index": 5,
+          "raw": "from domint1.stadtdo.de (bknginx01.stadtdo.de [172.30.14.56]) by bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2929FA00A1; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "from": "domint1.stadtdo.de",
+          "by": "bkpvps02.stadtdo.de",
+          "ip_addresses": [
+            "172.30.14.56"
+          ],
+          "id": "2929FA00A1",
+          "protocol": "ESMTPS",
+          "tls": null,
+          "timestamp_raw": "Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        }
+      ],
+      "hop_count": 6
+    },
+    "authentication": {
+      "authentication_results": [
+        {
+          "index": 0,
+          "raw": "mx.google.com; dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz; spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\"; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de",
+          "results": [
+            {
+              "mechanism": "dkim",
+              "result": "pass",
+              "details": "header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz"
+            },
+            {
+              "mechanism": "spf",
+              "result": "pass",
+              "details": "(google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\""
+            },
+            {
+              "mechanism": "dmarc",
+              "result": "pass",
+              "details": "(p=NONE sp=NONE dis=NONE) header.from=stadtdo.de"
+            }
+          ]
+        }
+      ],
+      "arc_authentication_results": [
+        {
+          "index": 0,
+          "raw": "i=1; mx.google.com; dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz; spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\"; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de",
+          "results": [
+            {
+              "mechanism": "dkim",
+              "result": "pass",
+              "details": "header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz"
+            },
+            {
+              "mechanism": "spf",
+              "result": "pass",
+              "details": "(google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\""
+            },
+            {
+              "mechanism": "dmarc",
+              "result": "pass",
+              "details": "(p=NONE sp=NONE dis=NONE) header.from=stadtdo.de"
+            }
+          ]
+        }
+      ],
+      "received_spf": [
+        {
+          "index": 0,
+          "raw": "pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) client-ip=45.82.172.40;",
+          "result": "pass",
+          "client_ip": "45.82.172.40"
+        }
+      ],
+      "dkim_signatures": [
+        {
+          "index": 0,
+          "raw": "v=1; a=rsa-sha256; d=stadtdo.de; s=20160127domcon01; c=relaxed/simple; q=dns/txt; i=@stadtdo.de; t=1681978707; x=1684570707; h=From:Sender:Reply-To:Subject:Date:Message-ID:To:Cc:MIME-Version:Content-type: Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From: Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id: List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive; bh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=; b=Nx4HkSmzInhO3crKTUGRyyxZKvcPzPXOv25OzvnCEfjFuHXSLeJYghgJ9TEBPIbr g55idXwhkPGga4ASngXSYq+OK0ODSaCOE/cewE7IDk50Ct9jV/9uV0sJ0R2O/a9E qurAJqjz0CoMBr1byumcGfYYPoeXmNt6XBeERLUr2Ir+0lfuFGYSFsnGeDNSgwCI OzqkjMbJDgFKuw8XF7PF78JbsWuUbUDU0JTwNKhTHfEhtdHHygtr8VzyHrCZjoEw 6E0SUdQHDT02u7oE91YBFD2IWSO1oX8oRAgGAyMK2/iCLJh/Rh+K0F7aheY5dG/c UeCcpOKAS6oG5KGa9NzC4A==;",
+          "tags": {
+            "v": "1",
+            "a": "rsa-sha256",
+            "d": "stadtdo.de",
+            "s": "20160127domcon01",
+            "c": "relaxed/simple",
+            "q": "dns/txt",
+            "i": "@stadtdo.de",
+            "t": "1681978707",
+            "x": "1684570707",
+            "h": "From:Sender:Reply-To:Subject:Date:Message-ID:To:Cc:MIME-Version:Content-type: Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From: Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id: List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive",
+            "bh": "yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=",
+            "b": "Nx4HkSmzInhO3crKTUGRyyxZKvcPzPXOv25OzvnCEfjFuHXSLeJYghgJ9TEBPIbr g55idXwhkPGga4ASngXSYq+OK0ODSaCOE/cewE7IDk50Ct9jV/9uV0sJ0R2O/a9E qurAJqjz0CoMBr1byumcGfYYPoeXmNt6XBeERLUr2Ir+0lfuFGYSFsnGeDNSgwCI OzqkjMbJDgFKuw8XF7PF78JbsWuUbUDU0JTwNKhTHfEhtdHHygtr8VzyHrCZjoEw 6E0SUdQHDT02u7oE91YBFD2IWSO1oX8oRAgGAyMK2/iCLJh/Rh+K0F7aheY5dG/c UeCcpOKAS6oG5KGa9NzC4A=="
+          }
+        }
+      ],
+      "arc_seals": [
+        {
+          "index": 0,
+          "raw": "i=1; a=rsa-sha256; t=1681978707; cv=none; d=google.com; s=arc-20160816; b=Z0PCr9YgHtkwSRkreuyvKSFZCSaEGKFCKkXsYdXY6tOGY/crsz5ElqyPYyvqGrC73j ByBbLmzeg9YK8nlq37BLBAGN0HLPZeEvcQSHFptfrIg73+wsROjRt0X0J3z15GocUtsG I8BD/Jtb0YS80Nc4bNTtLS1d2d8Pz42pp7gUJt4eQcyqymYkmMCjWXNHeDmp8hRYwEfL FS30yU6DaDYb6xot14VdIykKJLUk0i0pZZ3ht3JVSU3Us5hHa8P5AqazawUrXZfQvcpf WIZKJIY91QHAyIt61hHLpI0PDdFbuiboj7NlvlG0CXwtWT4GskYnTwMWMrv0hsj5iTHg UnzA==",
+          "tags": {
+            "i": "1",
+            "a": "rsa-sha256",
+            "t": "1681978707",
+            "cv": "none",
+            "d": "google.com",
+            "s": "arc-20160816",
+            "b": "Z0PCr9YgHtkwSRkreuyvKSFZCSaEGKFCKkXsYdXY6tOGY/crsz5ElqyPYyvqGrC73j ByBbLmzeg9YK8nlq37BLBAGN0HLPZeEvcQSHFptfrIg73+wsROjRt0X0J3z15GocUtsG I8BD/Jtb0YS80Nc4bNTtLS1d2d8Pz42pp7gUJt4eQcyqymYkmMCjWXNHeDmp8hRYwEfL FS30yU6DaDYb6xot14VdIykKJLUk0i0pZZ3ht3JVSU3Us5hHa8P5AqazawUrXZfQvcpf WIZKJIY91QHAyIt61hHLpI0PDdFbuiboj7NlvlG0CXwtWT4GskYnTwMWMrv0hsj5iTHg UnzA=="
+          }
+        }
+      ],
+      "arc_message_signatures": [
+        {
+          "index": 0,
+          "raw": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816; h=content-transfer-encoding:mime-version:date:from:message-id:cc:to :subject:references:in-reply-to:dkim-signature; bh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=; b=Hd11i5BcXJth4xV5GcXqb9anB6VJUECYhTNwpawmoMJf30QC9miqu8zU1/8/1cB/BL APw2i3hKsy7z/GTKEoBb+btILcUKC0FKfdHZrHuf9DyBOfhw+xYcBLMdbYNY+yESB1BU H3JVwxBe8xj3aGQUoKET6bH9fSfcUkLioQ9JlHaNqPLa7RwxDvKxcXEIQq2KC5cnYYTh uag2VFQPXK5veIFkABHKQ6bHHhsxFij0eILq5Wm869PA3swEv5pat+0mpXYL0zXdWrmB WV4r6KkHyshmg1S0kaH/BQ9hcH4dAOvQ/7UbqtbpKHGHiCT8eOJCEG4598VtnpbE3lJK bOcw==",
+          "tags": {
+            "i": "1",
+            "a": "rsa-sha256",
+            "c": "relaxed/relaxed",
+            "d": "google.com",
+            "s": "arc-20160816",
+            "h": "content-transfer-encoding:mime-version:date:from:message-id:cc:to :subject:references:in-reply-to:dkim-signature",
+            "bh": "yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=",
+            "b": "Hd11i5BcXJth4xV5GcXqb9anB6VJUECYhTNwpawmoMJf30QC9miqu8zU1/8/1cB/BL APw2i3hKsy7z/GTKEoBb+btILcUKC0FKfdHZrHuf9DyBOfhw+xYcBLMdbYNY+yESB1BU H3JVwxBe8xj3aGQUoKET6bH9fSfcUkLioQ9JlHaNqPLa7RwxDvKxcXEIQq2KC5cnYYTh uag2VFQPXK5veIFkABHKQ6bHHhsxFij0eILq5Wm869PA3swEv5pat+0mpXYL0zXdWrmB WV4r6KkHyshmg1S0kaH/BQ9hcH4dAOvQ/7UbqtbpKHGHiCT8eOJCEG4598VtnpbE3lJK bOcw=="
+          }
+        }
+      ]
+    },
+    "headers": {
+      "ordered": [
+        {
+          "index": 0,
+          "name": "X-Mozilla-Status",
+          "name_lower": "x-mozilla-status",
+          "value": "0001",
+          "raw": "X-Mozilla-Status: 0001"
+        },
+        {
+          "index": 1,
+          "name": "X-Mozilla-Status2",
+          "name_lower": "x-mozilla-status2",
+          "value": "00000000",
+          "raw": "X-Mozilla-Status2: 00000000"
+        },
+        {
+          "index": 2,
+          "name": "Delivered-To",
+          "name_lower": "delivered-to",
+          "value": "kristibelnikolova@gmail.com",
+          "raw": "Delivered-To: kristibelnikolova@gmail.com"
+        },
+        {
+          "index": 3,
+          "name": "Received",
+          "name_lower": "received",
+          "value": "by 2002:aa6:c3a8:0:b0:258:b864:78 with SMTP id a8csp231886lkq; Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "raw": "Received: by 2002:aa6:c3a8:0:b0:258:b864:78 with SMTP id a8csp231886lkq;\n        Thu, 20 Apr 2023 01:18:27 -0700 (PDT)"
+        },
+        {
+          "index": 4,
+          "name": "X-Google-Smtp-Source",
+          "name_lower": "x-google-smtp-source",
+          "value": "AKy350aGcKmGOlwVCG/ckuNEmwSN7+quod2dsUpkwBtDWZ/j20fRXCV+FzXT7OmYpxL1wFOvuPz8",
+          "raw": "X-Google-Smtp-Source: AKy350aGcKmGOlwVCG/ckuNEmwSN7+quod2dsUpkwBtDWZ/j20fRXCV+FzXT7OmYpxL1wFOvuPz8"
+        },
+        {
+          "index": 5,
+          "name": "X-Received",
+          "name_lower": "x-received",
+          "value": "by 2002:a7b:c5da:0:b0:3f1:7ba6:d5ab with SMTP id n26-20020a7bc5da000000b003f17ba6d5abmr599085wmk.36.1681978707667; Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "raw": "X-Received: by 2002:a7b:c5da:0:b0:3f1:7ba6:d5ab with SMTP id n26-20020a7bc5da000000b003f17ba6d5abmr599085wmk.36.1681978707667;\n        Thu, 20 Apr 2023 01:18:27 -0700 (PDT)"
+        },
+        {
+          "index": 6,
+          "name": "ARC-Seal",
+          "name_lower": "arc-seal",
+          "value": "i=1; a=rsa-sha256; t=1681978707; cv=none; d=google.com; s=arc-20160816; b=Z0PCr9YgHtkwSRkreuyvKSFZCSaEGKFCKkXsYdXY6tOGY/crsz5ElqyPYyvqGrC73j ByBbLmzeg9YK8nlq37BLBAGN0HLPZeEvcQSHFptfrIg73+wsROjRt0X0J3z15GocUtsG I8BD/Jtb0YS80Nc4bNTtLS1d2d8Pz42pp7gUJt4eQcyqymYkmMCjWXNHeDmp8hRYwEfL FS30yU6DaDYb6xot14VdIykKJLUk0i0pZZ3ht3JVSU3Us5hHa8P5AqazawUrXZfQvcpf WIZKJIY91QHAyIt61hHLpI0PDdFbuiboj7NlvlG0CXwtWT4GskYnTwMWMrv0hsj5iTHg UnzA==",
+          "raw": "ARC-Seal: i=1; a=rsa-sha256; t=1681978707; cv=none;\n        d=google.com; s=arc-20160816;\n        b=Z0PCr9YgHtkwSRkreuyvKSFZCSaEGKFCKkXsYdXY6tOGY/crsz5ElqyPYyvqGrC73j\n         ByBbLmzeg9YK8nlq37BLBAGN0HLPZeEvcQSHFptfrIg73+wsROjRt0X0J3z15GocUtsG\n         I8BD/Jtb0YS80Nc4bNTtLS1d2d8Pz42pp7gUJt4eQcyqymYkmMCjWXNHeDmp8hRYwEfL\n         FS30yU6DaDYb6xot14VdIykKJLUk0i0pZZ3ht3JVSU3Us5hHa8P5AqazawUrXZfQvcpf\n         WIZKJIY91QHAyIt61hHLpI0PDdFbuiboj7NlvlG0CXwtWT4GskYnTwMWMrv0hsj5iTHg\n         UnzA=="
+        },
+        {
+          "index": 7,
+          "name": "ARC-Message-Signature",
+          "name_lower": "arc-message-signature",
+          "value": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816; h=content-transfer-encoding:mime-version:date:from:message-id:cc:to :subject:references:in-reply-to:dkim-signature; bh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=; b=Hd11i5BcXJth4xV5GcXqb9anB6VJUECYhTNwpawmoMJf30QC9miqu8zU1/8/1cB/BL APw2i3hKsy7z/GTKEoBb+btILcUKC0FKfdHZrHuf9DyBOfhw+xYcBLMdbYNY+yESB1BU H3JVwxBe8xj3aGQUoKET6bH9fSfcUkLioQ9JlHaNqPLa7RwxDvKxcXEIQq2KC5cnYYTh uag2VFQPXK5veIFkABHKQ6bHHhsxFij0eILq5Wm869PA3swEv5pat+0mpXYL0zXdWrmB WV4r6KkHyshmg1S0kaH/BQ9hcH4dAOvQ/7UbqtbpKHGHiCT8eOJCEG4598VtnpbE3lJK bOcw==",
+          "raw": "ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;\n        h=content-transfer-encoding:mime-version:date:from:message-id:cc:to\n         :subject:references:in-reply-to:dkim-signature;\n        bh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=;\n        b=Hd11i5BcXJth4xV5GcXqb9anB6VJUECYhTNwpawmoMJf30QC9miqu8zU1/8/1cB/BL\n         APw2i3hKsy7z/GTKEoBb+btILcUKC0FKfdHZrHuf9DyBOfhw+xYcBLMdbYNY+yESB1BU\n         H3JVwxBe8xj3aGQUoKET6bH9fSfcUkLioQ9JlHaNqPLa7RwxDvKxcXEIQq2KC5cnYYTh\n         uag2VFQPXK5veIFkABHKQ6bHHhsxFij0eILq5Wm869PA3swEv5pat+0mpXYL0zXdWrmB\n         WV4r6KkHyshmg1S0kaH/BQ9hcH4dAOvQ/7UbqtbpKHGHiCT8eOJCEG4598VtnpbE3lJK\n         bOcw=="
+        },
+        {
+          "index": 8,
+          "name": "ARC-Authentication-Results",
+          "name_lower": "arc-authentication-results",
+          "value": "i=1; mx.google.com; dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz; spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\"; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de",
+          "raw": "ARC-Authentication-Results: i=1; mx.google.com;\n       dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz;\n       spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\";\n       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de"
+        },
+        {
+          "index": 9,
+          "name": "Return-Path",
+          "name_lower": "return-path",
+          "value": "<prvs=7474414084=lbloemer@stadtdo.de>",
+          "raw": "Return-Path: <prvs=7474414084=lbloemer@stadtdo.de>"
+        },
+        {
+          "index": 10,
+          "name": "Received",
+          "name_lower": "received",
+          "value": "from domgate01.stadtdo.de (mail.stadtdo.de. [45.82.172.40]) by mx.google.com with ESMTPS id m5-20020a7bce05000000b003ee4d160f3csi3138990wmc.212.2023.04.20.01.18.27 for <kristibelnikolova@gmail.com> (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128); Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "raw": "Received: from domgate01.stadtdo.de (mail.stadtdo.de. [45.82.172.40])\n        by mx.google.com with ESMTPS id m5-20020a7bce05000000b003ee4d160f3csi3138990wmc.212.2023.04.20.01.18.27\n        for <kristibelnikolova@gmail.com>\n        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);\n        Thu, 20 Apr 2023 01:18:27 -0700 (PDT)"
+        },
+        {
+          "index": 11,
+          "name": "Received-SPF",
+          "name_lower": "received-spf",
+          "value": "pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) client-ip=45.82.172.40;",
+          "raw": "Received-SPF: pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) client-ip=45.82.172.40;"
+        },
+        {
+          "index": 12,
+          "name": "Authentication-Results",
+          "name_lower": "authentication-results",
+          "value": "mx.google.com; dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz; spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\"; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de",
+          "raw": "Authentication-Results: mx.google.com;\n       dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz;\n       spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\";\n       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de"
+        },
+        {
+          "index": 13,
+          "name": "DKIM-Signature",
+          "name_lower": "dkim-signature",
+          "value": "v=1; a=rsa-sha256; d=stadtdo.de; s=20160127domcon01; c=relaxed/simple; q=dns/txt; i=@stadtdo.de; t=1681978707; x=1684570707; h=From:Sender:Reply-To:Subject:Date:Message-ID:To:Cc:MIME-Version:Content-type: Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From: Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id: List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive; bh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=; b=Nx4HkSmzInhO3crKTUGRyyxZKvcPzPXOv25OzvnCEfjFuHXSLeJYghgJ9TEBPIbr g55idXwhkPGga4ASngXSYq+OK0ODSaCOE/cewE7IDk50Ct9jV/9uV0sJ0R2O/a9E qurAJqjz0CoMBr1byumcGfYYPoeXmNt6XBeERLUr2Ir+0lfuFGYSFsnGeDNSgwCI OzqkjMbJDgFKuw8XF7PF78JbsWuUbUDU0JTwNKhTHfEhtdHHygtr8VzyHrCZjoEw 6E0SUdQHDT02u7oE91YBFD2IWSO1oX8oRAgGAyMK2/iCLJh/Rh+K0F7aheY5dG/c UeCcpOKAS6oG5KGa9NzC4A==;",
+          "raw": "DKIM-Signature: v=1; a=rsa-sha256; d=stadtdo.de; s=20160127domcon01; c=relaxed/simple;\n\tq=dns/txt; i=@stadtdo.de; t=1681978707; x=1684570707;\n\th=From:Sender:Reply-To:Subject:Date:Message-ID:To:Cc:MIME-Version:Content-type:\n\tContent-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From:\n\tResent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:\n\tList-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;\n\tbh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=;\n\tb=Nx4HkSmzInhO3crKTUGRyyxZKvcPzPXOv25OzvnCEfjFuHXSLeJYghgJ9TEBPIbr\n\tg55idXwhkPGga4ASngXSYq+OK0ODSaCOE/cewE7IDk50Ct9jV/9uV0sJ0R2O/a9E\n\tqurAJqjz0CoMBr1byumcGfYYPoeXmNt6XBeERLUr2Ir+0lfuFGYSFsnGeDNSgwCI\n\tOzqkjMbJDgFKuw8XF7PF78JbsWuUbUDU0JTwNKhTHfEhtdHHygtr8VzyHrCZjoEw\n\t6E0SUdQHDT02u7oE91YBFD2IWSO1oX8oRAgGAyMK2/iCLJh/Rh+K0F7aheY5dG/c\n\tUeCcpOKAS6oG5KGa9NzC4A==;"
+        },
+        {
+          "index": 14,
+          "name": "X-AuditID",
+          "name_lower": "x-auditid",
+          "value": "ac1e0325-c76e270000000d28-68-6440f5536899",
+          "raw": "X-AuditID: ac1e0325-c76e270000000d28-68-6440f5536899"
+        },
+        {
+          "index": 15,
+          "name": "Received",
+          "name_lower": "received",
+          "value": "from domgate0.stadtdo.de ( [172.18.118.133]) by domgate01.stadtdo.de (DO) with SMTP id DA.C8.03368.355F0446; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "raw": "Received: from domgate0.stadtdo.de ( [172.18.118.133])\n\tby domgate01.stadtdo.de (DO) with SMTP id DA.C8.03368.355F0446; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)"
+        },
+        {
+          "index": 16,
+          "name": "Received",
+          "name_lower": "received",
+          "value": "from bkpvps02.stadtdo.de (bkpvps02.stadtdo.de [172.30.14.53]) by domgate0.stadtdo.de (Postfix) with ESMTP id 536A74A014; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "raw": "Received: from bkpvps02.stadtdo.de (bkpvps02.stadtdo.de [172.30.14.53])\n\tby domgate0.stadtdo.de (Postfix) with ESMTP id 536A74A014;\n\tThu, 20 Apr 2023 10:18:27 +0200 (CEST)"
+        },
+        {
+          "index": 17,
+          "name": "Received",
+          "name_lower": "received",
+          "value": "from bkpvps02.stadtdo.de (localhost.localdomain [127.0.0.1]) by bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2D79AA013E; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "raw": "Received: from bkpvps02.stadtdo.de (localhost.localdomain [127.0.0.1])\n\tby bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2D79AA013E;\n\tThu, 20 Apr 2023 10:18:27 +0200 (CEST)"
+        },
+        {
+          "index": 18,
+          "name": "Received",
+          "name_lower": "received",
+          "value": "from domint1.stadtdo.de (bknginx01.stadtdo.de [172.30.14.56]) by bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2929FA00A1; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "raw": "Received: from domint1.stadtdo.de (bknginx01.stadtdo.de [172.30.14.56])\n\tby bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2929FA00A1;\n\tThu, 20 Apr 2023 10:18:27 +0200 (CEST)"
+        },
+        {
+          "index": 19,
+          "name": "In-Reply-To",
+          "name_lower": "in-reply-to",
+          "value": "<CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>",
+          "raw": "In-Reply-To: <CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>"
+        },
+        {
+          "index": 20,
+          "name": "References",
+          "name_lower": "references",
+          "value": "<CANozcoNys9XJszVUNk=iGpZvc+VmTTO6qc_v8AkCs7J1S6NMDQ@mail.gmail.com> <CANozcoN=r2n=XCJ5sB2PULWQ6qwL7cN10Wk-nz0JB-bbovUpig@mail.gmail.com> <OF78B6D46C.B35822DE-ONC1258994.002EC1B6-C1258994.002EE843@stadtdo.de> <CANozcoNNocbZvxfq9VGp_Vbf1gUTbZr8xFVFgnvV4EoE8bab0g@mail.gmail.com> <OFBB8B2EFF.B67FF5A0-ONC1258994.0033C0C9-C1258994.003402E0@stadtdo.de> <CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>",
+          "raw": "References: <CANozcoNys9XJszVUNk=iGpZvc+VmTTO6qc_v8AkCs7J1S6NMDQ@mail.gmail.com> <CANozcoN=r2n=XCJ5sB2PULWQ6qwL7cN10Wk-nz0JB-bbovUpig@mail.gmail.com> <OF78B6D46C.B35822DE-ONC1258994.002EC1B6-C1258994.002EE843@stadtdo.de> <CANozcoNNocbZvxfq9VGp_Vbf1gUTbZr8xFVFgnvV4EoE8bab0g@mail.gmail.com> <OFBB8B2EFF.B67FF5A0-ONC1258994.0033C0C9-C1258994.003402E0@stadtdo.de> <CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>"
+        },
+        {
+          "index": 21,
+          "name": "Subject",
+          "name_lower": "subject",
+          "value": "Antwort: Re: Re: Fwd: Antrag Familienhilfe",
+          "raw": "Subject: Antwort: Re: Re: Fwd: Antrag Familienhilfe"
+        },
+        {
+          "index": 22,
+          "name": "X-KeepSent",
+          "name_lower": "x-keepsent",
+          "value": "51C48196:167018D7-C1258997:002D757C; type=4; name=$KeepSent",
+          "raw": "X-KeepSent: 51C48196:167018D7-C1258997:002D757C;\n type=4; name=$KeepSent"
+        },
+        {
+          "index": 23,
+          "name": "To",
+          "name_lower": "to",
+          "value": "kristibelnikolova@gmail.com",
+          "raw": "To: kristibelnikolova@gmail.com"
+        },
+        {
+          "index": 24,
+          "name": "Cc",
+          "name_lower": "cc",
+          "value": "bahceci@schoepper-und-kollegen.de, kontakt@institut-bartoschek.de",
+          "raw": "Cc: bahceci@schoepper-und-kollegen.de,\n\tkontakt@institut-bartoschek.de"
+        },
+        {
+          "index": 25,
+          "name": "Message-ID",
+          "name_lower": "message-id",
+          "value": "<OF51C48196.167018D7-ONC1258997.002D757C-C1258997.002DA269@stadtdo.de>",
+          "raw": "Message-ID: <OF51C48196.167018D7-ONC1258997.002D757C-C1258997.002DA269@stadtdo.de>"
+        },
+        {
+          "index": 26,
+          "name": "From",
+          "name_lower": "from",
+          "value": "lbloemer@stadtdo.de",
+          "raw": "From: lbloemer@stadtdo.de"
+        },
+        {
+          "index": 27,
+          "name": "Date",
+          "name_lower": "date",
+          "value": "Thu, 20 Apr 2023 10:18:26 +0200",
+          "raw": "Date: Thu, 20 Apr 2023 10:18:26 +0200"
+        },
+        {
+          "index": 28,
+          "name": "MIME-Version",
+          "name_lower": "mime-version",
+          "value": "1.0",
+          "raw": "MIME-Version: 1.0"
+        },
+        {
+          "index": 29,
+          "name": "Content-type",
+          "name_lower": "content-type",
+          "value": "text/plain; charset=UTF-8",
+          "raw": "Content-type: text/plain; charset=UTF-8"
+        },
+        {
+          "index": 30,
+          "name": "Content-transfer-encoding",
+          "name_lower": "content-transfer-encoding",
+          "value": "base64",
+          "raw": "Content-transfer-encoding: base64"
+        },
+        {
+          "index": 31,
+          "name": "X-Brightmail-Tracker",
+          "name_lower": "x-brightmail-tracker",
+          "value": "H4sIAAAAAAAAA+NgFrrJLMWRmVeSWpSXmKPExsWyRqisVTf4q0OKwebZUhZrv+xit1jSxWYx 6fQBFgdmj52z7rJ7zHnznNnj3LYtLAHMUdw2SYklZcGZ6Xn6dgncGY9aDrIXTPCuuNJxkq2B cYpnFyMnh4SAicS69dvZuhi5OIQE5jNKHFt2gR3CWcsocfTjSmY4Z+7fxawgLUIC6xglVvyU ALE5BQIlLm28zQpVxCzRdegxE0hCWMBYYlfre3aIHZ4SVw+vBYuLCMhLfHxyiQ3EZhZwl/j1 rwXM5hUIkrh1fCYjiM0mICmxrWMBWJxFQFVi5+37LBA1ghInZz5hgehVl5g0bxEzhK0oMW1R A+MERsFZSMpmISmbhaRsASPzKkaRlPzc9MSSVANDveKSxJSSlHy9lNRNjKAwlmNW3cH4cavX IUYmDsZDjBIczEoivGdcrVKEeFMSK6tSi/Lji0pzUosPMUpzsCiJ807+9yZZSABkWHZqakFq EUyWiYMTpJtLSqQ4NS8ltSixtCQjHhQh8cXAGJFqYCxtc88uXVD6ZWfL3NOPLnxav+6ycd/n QPYq10lbJF22TvkaX1Jd1HnyiGC2o9k5/T1XTyuYykRf2JQiKr2k++DaXwfLb6sFXbPs/69/ 0F7VWKf43oFLqZnPOTa6P3vBZPr87Eb5kr+sbbMfJ3awfNirz/SGoaBaTNM9vTc6kefuzZnt B6U+ySixFGckGmoxFxUnAgDvGLiDbAIAAA==",
+          "raw": "X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFrrJLMWRmVeSWpSXmKPExsWyRqisVTf4q0OKwebZUhZrv+xit1jSxWYx\n\t6fQBFgdmj52z7rJ7zHnznNnj3LYtLAHMUdw2SYklZcGZ6Xn6dgncGY9aDrIXTPCuuNJxkq2B\n\tcYpnFyMnh4SAicS69dvZuhi5OIQE5jNKHFt2gR3CWcsocfTjSmY4Z+7fxawgLUIC6xglVvyU\n\tALE5BQIlLm28zQpVxCzRdegxE0hCWMBYYlfre3aIHZ4SVw+vBYuLCMhLfHxyiQ3EZhZwl/j1\n\trwXM5hUIkrh1fCYjiM0mICmxrWMBWJxFQFVi5+37LBA1ghInZz5hgehVl5g0bxEzhK0oMW1R\n\tA+MERsFZSMpmISmbhaRsASPzKkaRlPzc9MSSVANDveKSxJSSlHy9lNRNjKAwlmNW3cH4cavX\n\tIUYmDsZDjBIczEoivGdcrVKEeFMSK6tSi/Lji0pzUosPMUpzsCiJ807+9yZZSABkWHZqakFq\n\tEUyWiYMTpJtLSqQ4NS8ltSixtCQjHhQh8cXAGJFqYCxtc88uXVD6ZWfL3NOPLnxav+6ycd/n\n\tQPYq10lbJF22TvkaX1Jd1HnyiGC2o9k5/T1XTyuYykRf2JQiKr2k++DaXwfLb6sFXbPs/69/\n\t0F7VWKf43oFLqZnPOTa6P3vBZPr87Eb5kr+sbbMfJ3awfNirz/SGoaBaTNM9vTc6kefuzZnt\n\tB6U+ySixFGckGmoxFxUnAgDvGLiDbAIAAA=="
+        }
+      ],
+      "by_name": {
+        "x-mozilla-status": [
+          "0001"
+        ],
+        "x-mozilla-status2": [
+          "00000000"
+        ],
+        "delivered-to": [
+          "kristibelnikolova@gmail.com"
+        ],
+        "received": [
+          "by 2002:aa6:c3a8:0:b0:258:b864:78 with SMTP id a8csp231886lkq; Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "from domgate01.stadtdo.de (mail.stadtdo.de. [45.82.172.40]) by mx.google.com with ESMTPS id m5-20020a7bce05000000b003ee4d160f3csi3138990wmc.212.2023.04.20.01.18.27 for <kristibelnikolova@gmail.com> (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128); Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "from domgate0.stadtdo.de ( [172.18.118.133]) by domgate01.stadtdo.de (DO) with SMTP id DA.C8.03368.355F0446; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "from bkpvps02.stadtdo.de (bkpvps02.stadtdo.de [172.30.14.53]) by domgate0.stadtdo.de (Postfix) with ESMTP id 536A74A014; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "from bkpvps02.stadtdo.de (localhost.localdomain [127.0.0.1]) by bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2D79AA013E; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "from domint1.stadtdo.de (bknginx01.stadtdo.de [172.30.14.56]) by bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2929FA00A1; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)"
+        ],
+        "x-google-smtp-source": [
+          "AKy350aGcKmGOlwVCG/ckuNEmwSN7+quod2dsUpkwBtDWZ/j20fRXCV+FzXT7OmYpxL1wFOvuPz8"
+        ],
+        "x-received": [
+          "by 2002:a7b:c5da:0:b0:3f1:7ba6:d5ab with SMTP id n26-20020a7bc5da000000b003f17ba6d5abmr599085wmk.36.1681978707667; Thu, 20 Apr 2023 01:18:27 -0700 (PDT)"
+        ],
+        "arc-seal": [
+          "i=1; a=rsa-sha256; t=1681978707; cv=none; d=google.com; s=arc-20160816; b=Z0PCr9YgHtkwSRkreuyvKSFZCSaEGKFCKkXsYdXY6tOGY/crsz5ElqyPYyvqGrC73j ByBbLmzeg9YK8nlq37BLBAGN0HLPZeEvcQSHFptfrIg73+wsROjRt0X0J3z15GocUtsG I8BD/Jtb0YS80Nc4bNTtLS1d2d8Pz42pp7gUJt4eQcyqymYkmMCjWXNHeDmp8hRYwEfL FS30yU6DaDYb6xot14VdIykKJLUk0i0pZZ3ht3JVSU3Us5hHa8P5AqazawUrXZfQvcpf WIZKJIY91QHAyIt61hHLpI0PDdFbuiboj7NlvlG0CXwtWT4GskYnTwMWMrv0hsj5iTHg UnzA=="
+        ],
+        "arc-message-signature": [
+          "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816; h=content-transfer-encoding:mime-version:date:from:message-id:cc:to :subject:references:in-reply-to:dkim-signature; bh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=; b=Hd11i5BcXJth4xV5GcXqb9anB6VJUECYhTNwpawmoMJf30QC9miqu8zU1/8/1cB/BL APw2i3hKsy7z/GTKEoBb+btILcUKC0FKfdHZrHuf9DyBOfhw+xYcBLMdbYNY+yESB1BU H3JVwxBe8xj3aGQUoKET6bH9fSfcUkLioQ9JlHaNqPLa7RwxDvKxcXEIQq2KC5cnYYTh uag2VFQPXK5veIFkABHKQ6bHHhsxFij0eILq5Wm869PA3swEv5pat+0mpXYL0zXdWrmB WV4r6KkHyshmg1S0kaH/BQ9hcH4dAOvQ/7UbqtbpKHGHiCT8eOJCEG4598VtnpbE3lJK bOcw=="
+        ],
+        "arc-authentication-results": [
+          "i=1; mx.google.com; dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz; spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\"; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de"
+        ],
+        "return-path": [
+          "<prvs=7474414084=lbloemer@stadtdo.de>"
+        ],
+        "received-spf": [
+          "pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) client-ip=45.82.172.40;"
+        ],
+        "authentication-results": [
+          "mx.google.com; dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz; spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\"; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de"
+        ],
+        "dkim-signature": [
+          "v=1; a=rsa-sha256; d=stadtdo.de; s=20160127domcon01; c=relaxed/simple; q=dns/txt; i=@stadtdo.de; t=1681978707; x=1684570707; h=From:Sender:Reply-To:Subject:Date:Message-ID:To:Cc:MIME-Version:Content-type: Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From: Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id: List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive; bh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=; b=Nx4HkSmzInhO3crKTUGRyyxZKvcPzPXOv25OzvnCEfjFuHXSLeJYghgJ9TEBPIbr g55idXwhkPGga4ASngXSYq+OK0ODSaCOE/cewE7IDk50Ct9jV/9uV0sJ0R2O/a9E qurAJqjz0CoMBr1byumcGfYYPoeXmNt6XBeERLUr2Ir+0lfuFGYSFsnGeDNSgwCI OzqkjMbJDgFKuw8XF7PF78JbsWuUbUDU0JTwNKhTHfEhtdHHygtr8VzyHrCZjoEw 6E0SUdQHDT02u7oE91YBFD2IWSO1oX8oRAgGAyMK2/iCLJh/Rh+K0F7aheY5dG/c UeCcpOKAS6oG5KGa9NzC4A==;"
+        ],
+        "x-auditid": [
+          "ac1e0325-c76e270000000d28-68-6440f5536899"
+        ],
+        "in-reply-to": [
+          "<CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>"
+        ],
+        "references": [
+          "<CANozcoNys9XJszVUNk=iGpZvc+VmTTO6qc_v8AkCs7J1S6NMDQ@mail.gmail.com> <CANozcoN=r2n=XCJ5sB2PULWQ6qwL7cN10Wk-nz0JB-bbovUpig@mail.gmail.com> <OF78B6D46C.B35822DE-ONC1258994.002EC1B6-C1258994.002EE843@stadtdo.de> <CANozcoNNocbZvxfq9VGp_Vbf1gUTbZr8xFVFgnvV4EoE8bab0g@mail.gmail.com> <OFBB8B2EFF.B67FF5A0-ONC1258994.0033C0C9-C1258994.003402E0@stadtdo.de> <CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>"
+        ],
+        "subject": [
+          "Antwort: Re: Re: Fwd: Antrag Familienhilfe"
+        ],
+        "x-keepsent": [
+          "51C48196:167018D7-C1258997:002D757C; type=4; name=$KeepSent"
+        ],
+        "to": [
+          "kristibelnikolova@gmail.com"
+        ],
+        "cc": [
+          "bahceci@schoepper-und-kollegen.de, kontakt@institut-bartoschek.de"
+        ],
+        "message-id": [
+          "<OF51C48196.167018D7-ONC1258997.002D757C-C1258997.002DA269@stadtdo.de>"
+        ],
+        "from": [
+          "lbloemer@stadtdo.de"
+        ],
+        "date": [
+          "Thu, 20 Apr 2023 10:18:26 +0200"
+        ],
+        "mime-version": [
+          "1.0"
+        ],
+        "content-type": [
+          "text/plain; charset=UTF-8"
+        ],
+        "content-transfer-encoding": [
+          "base64"
+        ],
+        "x-brightmail-tracker": [
+          "H4sIAAAAAAAAA+NgFrrJLMWRmVeSWpSXmKPExsWyRqisVTf4q0OKwebZUhZrv+xit1jSxWYx 6fQBFgdmj52z7rJ7zHnznNnj3LYtLAHMUdw2SYklZcGZ6Xn6dgncGY9aDrIXTPCuuNJxkq2B cYpnFyMnh4SAicS69dvZuhi5OIQE5jNKHFt2gR3CWcsocfTjSmY4Z+7fxawgLUIC6xglVvyU ALE5BQIlLm28zQpVxCzRdegxE0hCWMBYYlfre3aIHZ4SVw+vBYuLCMhLfHxyiQ3EZhZwl/j1 rwXM5hUIkrh1fCYjiM0mICmxrWMBWJxFQFVi5+37LBA1ghInZz5hgehVl5g0bxEzhK0oMW1R A+MERsFZSMpmISmbhaRsASPzKkaRlPzc9MSSVANDveKSxJSSlHy9lNRNjKAwlmNW3cH4cavX IUYmDsZDjBIczEoivGdcrVKEeFMSK6tSi/Lji0pzUosPMUpzsCiJ807+9yZZSABkWHZqakFq EUyWiYMTpJtLSqQ4NS8ltSixtCQjHhQh8cXAGJFqYCxtc88uXVD6ZWfL3NOPLnxav+6ycd/n QPYq10lbJF22TvkaX1Jd1HnyiGC2o9k5/T1XTyuYykRf2JQiKr2k++DaXwfLb6sFXbPs/69/ 0F7VWKf43oFLqZnPOTa6P3vBZPr87Eb5kr+sbbMfJ3awfNirz/SGoaBaTNM9vTc6kefuzZnt B6U+ySixFGckGmoxFxUnAgDvGLiDbAIAAA=="
+        ]
+      },
+      "raw_sha256": "f3533d773c2b9a0ca8f54f8787d95898be10cdd4e3394fc895f5651451796cf5"
+    },
+    "mime": {
+      "root": {
+        "path": "1",
+        "headers": [
+          {
+            "index": 0,
+            "name": "X-Mozilla-Status",
+            "name_lower": "x-mozilla-status",
+            "value": "0001",
+            "raw": "X-Mozilla-Status: 0001"
+          },
+          {
+            "index": 1,
+            "name": "X-Mozilla-Status2",
+            "name_lower": "x-mozilla-status2",
+            "value": "00000000",
+            "raw": "X-Mozilla-Status2: 00000000"
+          },
+          {
+            "index": 2,
+            "name": "Delivered-To",
+            "name_lower": "delivered-to",
+            "value": "kristibelnikolova@gmail.com",
+            "raw": "Delivered-To: kristibelnikolova@gmail.com"
+          },
+          {
+            "index": 3,
+            "name": "Received",
+            "name_lower": "received",
+            "value": "by 2002:aa6:c3a8:0:b0:258:b864:78 with SMTP id a8csp231886lkq; Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+            "raw": "Received: by 2002:aa6:c3a8:0:b0:258:b864:78 with SMTP id a8csp231886lkq;\n        Thu, 20 Apr 2023 01:18:27 -0700 (PDT)"
+          },
+          {
+            "index": 4,
+            "name": "X-Google-Smtp-Source",
+            "name_lower": "x-google-smtp-source",
+            "value": "AKy350aGcKmGOlwVCG/ckuNEmwSN7+quod2dsUpkwBtDWZ/j20fRXCV+FzXT7OmYpxL1wFOvuPz8",
+            "raw": "X-Google-Smtp-Source: AKy350aGcKmGOlwVCG/ckuNEmwSN7+quod2dsUpkwBtDWZ/j20fRXCV+FzXT7OmYpxL1wFOvuPz8"
+          },
+          {
+            "index": 5,
+            "name": "X-Received",
+            "name_lower": "x-received",
+            "value": "by 2002:a7b:c5da:0:b0:3f1:7ba6:d5ab with SMTP id n26-20020a7bc5da000000b003f17ba6d5abmr599085wmk.36.1681978707667; Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+            "raw": "X-Received: by 2002:a7b:c5da:0:b0:3f1:7ba6:d5ab with SMTP id n26-20020a7bc5da000000b003f17ba6d5abmr599085wmk.36.1681978707667;\n        Thu, 20 Apr 2023 01:18:27 -0700 (PDT)"
+          },
+          {
+            "index": 6,
+            "name": "ARC-Seal",
+            "name_lower": "arc-seal",
+            "value": "i=1; a=rsa-sha256; t=1681978707; cv=none; d=google.com; s=arc-20160816; b=Z0PCr9YgHtkwSRkreuyvKSFZCSaEGKFCKkXsYdXY6tOGY/crsz5ElqyPYyvqGrC73j ByBbLmzeg9YK8nlq37BLBAGN0HLPZeEvcQSHFptfrIg73+wsROjRt0X0J3z15GocUtsG I8BD/Jtb0YS80Nc4bNTtLS1d2d8Pz42pp7gUJt4eQcyqymYkmMCjWXNHeDmp8hRYwEfL FS30yU6DaDYb6xot14VdIykKJLUk0i0pZZ3ht3JVSU3Us5hHa8P5AqazawUrXZfQvcpf WIZKJIY91QHAyIt61hHLpI0PDdFbuiboj7NlvlG0CXwtWT4GskYnTwMWMrv0hsj5iTHg UnzA==",
+            "raw": "ARC-Seal: i=1; a=rsa-sha256; t=1681978707; cv=none;\n        d=google.com; s=arc-20160816;\n        b=Z0PCr9YgHtkwSRkreuyvKSFZCSaEGKFCKkXsYdXY6tOGY/crsz5ElqyPYyvqGrC73j\n         ByBbLmzeg9YK8nlq37BLBAGN0HLPZeEvcQSHFptfrIg73+wsROjRt0X0J3z15GocUtsG\n         I8BD/Jtb0YS80Nc4bNTtLS1d2d8Pz42pp7gUJt4eQcyqymYkmMCjWXNHeDmp8hRYwEfL\n         FS30yU6DaDYb6xot14VdIykKJLUk0i0pZZ3ht3JVSU3Us5hHa8P5AqazawUrXZfQvcpf\n         WIZKJIY91QHAyIt61hHLpI0PDdFbuiboj7NlvlG0CXwtWT4GskYnTwMWMrv0hsj5iTHg\n         UnzA=="
+          },
+          {
+            "index": 7,
+            "name": "ARC-Message-Signature",
+            "name_lower": "arc-message-signature",
+            "value": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816; h=content-transfer-encoding:mime-version:date:from:message-id:cc:to :subject:references:in-reply-to:dkim-signature; bh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=; b=Hd11i5BcXJth4xV5GcXqb9anB6VJUECYhTNwpawmoMJf30QC9miqu8zU1/8/1cB/BL APw2i3hKsy7z/GTKEoBb+btILcUKC0FKfdHZrHuf9DyBOfhw+xYcBLMdbYNY+yESB1BU H3JVwxBe8xj3aGQUoKET6bH9fSfcUkLioQ9JlHaNqPLa7RwxDvKxcXEIQq2KC5cnYYTh uag2VFQPXK5veIFkABHKQ6bHHhsxFij0eILq5Wm869PA3swEv5pat+0mpXYL0zXdWrmB WV4r6KkHyshmg1S0kaH/BQ9hcH4dAOvQ/7UbqtbpKHGHiCT8eOJCEG4598VtnpbE3lJK bOcw==",
+            "raw": "ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;\n        h=content-transfer-encoding:mime-version:date:from:message-id:cc:to\n         :subject:references:in-reply-to:dkim-signature;\n        bh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=;\n        b=Hd11i5BcXJth4xV5GcXqb9anB6VJUECYhTNwpawmoMJf30QC9miqu8zU1/8/1cB/BL\n         APw2i3hKsy7z/GTKEoBb+btILcUKC0FKfdHZrHuf9DyBOfhw+xYcBLMdbYNY+yESB1BU\n         H3JVwxBe8xj3aGQUoKET6bH9fSfcUkLioQ9JlHaNqPLa7RwxDvKxcXEIQq2KC5cnYYTh\n         uag2VFQPXK5veIFkABHKQ6bHHhsxFij0eILq5Wm869PA3swEv5pat+0mpXYL0zXdWrmB\n         WV4r6KkHyshmg1S0kaH/BQ9hcH4dAOvQ/7UbqtbpKHGHiCT8eOJCEG4598VtnpbE3lJK\n         bOcw=="
+          },
+          {
+            "index": 8,
+            "name": "ARC-Authentication-Results",
+            "name_lower": "arc-authentication-results",
+            "value": "i=1; mx.google.com; dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz; spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\"; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de",
+            "raw": "ARC-Authentication-Results: i=1; mx.google.com;\n       dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz;\n       spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\";\n       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de"
+          },
+          {
+            "index": 9,
+            "name": "Return-Path",
+            "name_lower": "return-path",
+            "value": "<prvs=7474414084=lbloemer@stadtdo.de>",
+            "raw": "Return-Path: <prvs=7474414084=lbloemer@stadtdo.de>"
+          },
+          {
+            "index": 10,
+            "name": "Received",
+            "name_lower": "received",
+            "value": "from domgate01.stadtdo.de (mail.stadtdo.de. [45.82.172.40]) by mx.google.com with ESMTPS id m5-20020a7bce05000000b003ee4d160f3csi3138990wmc.212.2023.04.20.01.18.27 for <kristibelnikolova@gmail.com> (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128); Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+            "raw": "Received: from domgate01.stadtdo.de (mail.stadtdo.de. [45.82.172.40])\n        by mx.google.com with ESMTPS id m5-20020a7bce05000000b003ee4d160f3csi3138990wmc.212.2023.04.20.01.18.27\n        for <kristibelnikolova@gmail.com>\n        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);\n        Thu, 20 Apr 2023 01:18:27 -0700 (PDT)"
+          },
+          {
+            "index": 11,
+            "name": "Received-SPF",
+            "name_lower": "received-spf",
+            "value": "pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) client-ip=45.82.172.40;",
+            "raw": "Received-SPF: pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) client-ip=45.82.172.40;"
+          },
+          {
+            "index": 12,
+            "name": "Authentication-Results",
+            "name_lower": "authentication-results",
+            "value": "mx.google.com; dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz; spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\"; dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de",
+            "raw": "Authentication-Results: mx.google.com;\n       dkim=pass header.i=@stadtdo.de header.s=20160127domcon01 header.b=Nx4HkSmz;\n       spf=pass (google.com: domain of prvs=7474414084=lbloemer@stadtdo.de designates 45.82.172.40 as permitted sender) smtp.mailfrom=\"prvs=7474414084=lbloemer@stadtdo.de\";\n       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=stadtdo.de"
+          },
+          {
+            "index": 13,
+            "name": "DKIM-Signature",
+            "name_lower": "dkim-signature",
+            "value": "v=1; a=rsa-sha256; d=stadtdo.de; s=20160127domcon01; c=relaxed/simple; q=dns/txt; i=@stadtdo.de; t=1681978707; x=1684570707; h=From:Sender:Reply-To:Subject:Date:Message-ID:To:Cc:MIME-Version:Content-type: Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From: Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id: List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive; bh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=; b=Nx4HkSmzInhO3crKTUGRyyxZKvcPzPXOv25OzvnCEfjFuHXSLeJYghgJ9TEBPIbr g55idXwhkPGga4ASngXSYq+OK0ODSaCOE/cewE7IDk50Ct9jV/9uV0sJ0R2O/a9E qurAJqjz0CoMBr1byumcGfYYPoeXmNt6XBeERLUr2Ir+0lfuFGYSFsnGeDNSgwCI OzqkjMbJDgFKuw8XF7PF78JbsWuUbUDU0JTwNKhTHfEhtdHHygtr8VzyHrCZjoEw 6E0SUdQHDT02u7oE91YBFD2IWSO1oX8oRAgGAyMK2/iCLJh/Rh+K0F7aheY5dG/c UeCcpOKAS6oG5KGa9NzC4A==;",
+            "raw": "DKIM-Signature: v=1; a=rsa-sha256; d=stadtdo.de; s=20160127domcon01; c=relaxed/simple;\n\tq=dns/txt; i=@stadtdo.de; t=1681978707; x=1684570707;\n\th=From:Sender:Reply-To:Subject:Date:Message-ID:To:Cc:MIME-Version:Content-type:\n\tContent-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From:\n\tResent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:\n\tList-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;\n\tbh=yJq7SRTT1CEBtK+oxePyNkDyd+xTPUYgaFBtHB7S4PM=;\n\tb=Nx4HkSmzInhO3crKTUGRyyxZKvcPzPXOv25OzvnCEfjFuHXSLeJYghgJ9TEBPIbr\n\tg55idXwhkPGga4ASngXSYq+OK0ODSaCOE/cewE7IDk50Ct9jV/9uV0sJ0R2O/a9E\n\tqurAJqjz0CoMBr1byumcGfYYPoeXmNt6XBeERLUr2Ir+0lfuFGYSFsnGeDNSgwCI\n\tOzqkjMbJDgFKuw8XF7PF78JbsWuUbUDU0JTwNKhTHfEhtdHHygtr8VzyHrCZjoEw\n\t6E0SUdQHDT02u7oE91YBFD2IWSO1oX8oRAgGAyMK2/iCLJh/Rh+K0F7aheY5dG/c\n\tUeCcpOKAS6oG5KGa9NzC4A==;"
+          },
+          {
+            "index": 14,
+            "name": "X-AuditID",
+            "name_lower": "x-auditid",
+            "value": "ac1e0325-c76e270000000d28-68-6440f5536899",
+            "raw": "X-AuditID: ac1e0325-c76e270000000d28-68-6440f5536899"
+          },
+          {
+            "index": 15,
+            "name": "Received",
+            "name_lower": "received",
+            "value": "from domgate0.stadtdo.de ( [172.18.118.133]) by domgate01.stadtdo.de (DO) with SMTP id DA.C8.03368.355F0446; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+            "raw": "Received: from domgate0.stadtdo.de ( [172.18.118.133])\n\tby domgate01.stadtdo.de (DO) with SMTP id DA.C8.03368.355F0446; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)"
+          },
+          {
+            "index": 16,
+            "name": "Received",
+            "name_lower": "received",
+            "value": "from bkpvps02.stadtdo.de (bkpvps02.stadtdo.de [172.30.14.53]) by domgate0.stadtdo.de (Postfix) with ESMTP id 536A74A014; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+            "raw": "Received: from bkpvps02.stadtdo.de (bkpvps02.stadtdo.de [172.30.14.53])\n\tby domgate0.stadtdo.de (Postfix) with ESMTP id 536A74A014;\n\tThu, 20 Apr 2023 10:18:27 +0200 (CEST)"
+          },
+          {
+            "index": 17,
+            "name": "Received",
+            "name_lower": "received",
+            "value": "from bkpvps02.stadtdo.de (localhost.localdomain [127.0.0.1]) by bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2D79AA013E; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+            "raw": "Received: from bkpvps02.stadtdo.de (localhost.localdomain [127.0.0.1])\n\tby bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2D79AA013E;\n\tThu, 20 Apr 2023 10:18:27 +0200 (CEST)"
+          },
+          {
+            "index": 18,
+            "name": "Received",
+            "name_lower": "received",
+            "value": "from domint1.stadtdo.de (bknginx01.stadtdo.de [172.30.14.56]) by bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2929FA00A1; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+            "raw": "Received: from domint1.stadtdo.de (bknginx01.stadtdo.de [172.30.14.56])\n\tby bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2929FA00A1;\n\tThu, 20 Apr 2023 10:18:27 +0200 (CEST)"
+          },
+          {
+            "index": 19,
+            "name": "In-Reply-To",
+            "name_lower": "in-reply-to",
+            "value": "<CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>",
+            "raw": "In-Reply-To: <CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>"
+          },
+          {
+            "index": 20,
+            "name": "References",
+            "name_lower": "references",
+            "value": "<CANozcoNys9XJszVUNk=iGpZvc+VmTTO6qc_v8AkCs7J1S6NMDQ@mail.gmail.com> <CANozcoN=r2n=XCJ5sB2PULWQ6qwL7cN10Wk-nz0JB-bbovUpig@mail.gmail.com> <OF78B6D46C.B35822DE-ONC1258994.002EC1B6-C1258994.002EE843@stadtdo.de> <CANozcoNNocbZvxfq9VGp_Vbf1gUTbZr8xFVFgnvV4EoE8bab0g@mail.gmail.com> <OFBB8B2EFF.B67FF5A0-ONC1258994.0033C0C9-C1258994.003402E0@stadtdo.de> <CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>",
+            "raw": "References: <CANozcoNys9XJszVUNk=iGpZvc+VmTTO6qc_v8AkCs7J1S6NMDQ@mail.gmail.com> <CANozcoN=r2n=XCJ5sB2PULWQ6qwL7cN10Wk-nz0JB-bbovUpig@mail.gmail.com> <OF78B6D46C.B35822DE-ONC1258994.002EC1B6-C1258994.002EE843@stadtdo.de> <CANozcoNNocbZvxfq9VGp_Vbf1gUTbZr8xFVFgnvV4EoE8bab0g@mail.gmail.com> <OFBB8B2EFF.B67FF5A0-ONC1258994.0033C0C9-C1258994.003402E0@stadtdo.de> <CANozcoPEqBa=tBt-Fc2Y4W=3bksuOqvFjSfSbnYXnyg1XgbaRQ@mail.gmail.com>"
+          },
+          {
+            "index": 21,
+            "name": "Subject",
+            "name_lower": "subject",
+            "value": "Antwort: Re: Re: Fwd: Antrag Familienhilfe",
+            "raw": "Subject: Antwort: Re: Re: Fwd: Antrag Familienhilfe"
+          },
+          {
+            "index": 22,
+            "name": "X-KeepSent",
+            "name_lower": "x-keepsent",
+            "value": "51C48196:167018D7-C1258997:002D757C; type=4; name=$KeepSent",
+            "raw": "X-KeepSent: 51C48196:167018D7-C1258997:002D757C;\n type=4; name=$KeepSent"
+          },
+          {
+            "index": 23,
+            "name": "To",
+            "name_lower": "to",
+            "value": "kristibelnikolova@gmail.com",
+            "raw": "To: kristibelnikolova@gmail.com"
+          },
+          {
+            "index": 24,
+            "name": "Cc",
+            "name_lower": "cc",
+            "value": "bahceci@schoepper-und-kollegen.de, kontakt@institut-bartoschek.de",
+            "raw": "Cc: bahceci@schoepper-und-kollegen.de,\n\tkontakt@institut-bartoschek.de"
+          },
+          {
+            "index": 25,
+            "name": "Message-ID",
+            "name_lower": "message-id",
+            "value": "<OF51C48196.167018D7-ONC1258997.002D757C-C1258997.002DA269@stadtdo.de>",
+            "raw": "Message-ID: <OF51C48196.167018D7-ONC1258997.002D757C-C1258997.002DA269@stadtdo.de>"
+          },
+          {
+            "index": 26,
+            "name": "From",
+            "name_lower": "from",
+            "value": "lbloemer@stadtdo.de",
+            "raw": "From: lbloemer@stadtdo.de"
+          },
+          {
+            "index": 27,
+            "name": "Date",
+            "name_lower": "date",
+            "value": "Thu, 20 Apr 2023 10:18:26 +0200",
+            "raw": "Date: Thu, 20 Apr 2023 10:18:26 +0200"
+          },
+          {
+            "index": 28,
+            "name": "MIME-Version",
+            "name_lower": "mime-version",
+            "value": "1.0",
+            "raw": "MIME-Version: 1.0"
+          },
+          {
+            "index": 29,
+            "name": "Content-type",
+            "name_lower": "content-type",
+            "value": "text/plain; charset=UTF-8",
+            "raw": "Content-type: text/plain; charset=UTF-8"
+          },
+          {
+            "index": 30,
+            "name": "Content-transfer-encoding",
+            "name_lower": "content-transfer-encoding",
+            "value": "base64",
+            "raw": "Content-transfer-encoding: base64"
+          },
+          {
+            "index": 31,
+            "name": "X-Brightmail-Tracker",
+            "name_lower": "x-brightmail-tracker",
+            "value": "H4sIAAAAAAAAA+NgFrrJLMWRmVeSWpSXmKPExsWyRqisVTf4q0OKwebZUhZrv+xit1jSxWYx 6fQBFgdmj52z7rJ7zHnznNnj3LYtLAHMUdw2SYklZcGZ6Xn6dgncGY9aDrIXTPCuuNJxkq2B cYpnFyMnh4SAicS69dvZuhi5OIQE5jNKHFt2gR3CWcsocfTjSmY4Z+7fxawgLUIC6xglVvyU ALE5BQIlLm28zQpVxCzRdegxE0hCWMBYYlfre3aIHZ4SVw+vBYuLCMhLfHxyiQ3EZhZwl/j1 rwXM5hUIkrh1fCYjiM0mICmxrWMBWJxFQFVi5+37LBA1ghInZz5hgehVl5g0bxEzhK0oMW1R A+MERsFZSMpmISmbhaRsASPzKkaRlPzc9MSSVANDveKSxJSSlHy9lNRNjKAwlmNW3cH4cavX IUYmDsZDjBIczEoivGdcrVKEeFMSK6tSi/Lji0pzUosPMUpzsCiJ807+9yZZSABkWHZqakFq EUyWiYMTpJtLSqQ4NS8ltSixtCQjHhQh8cXAGJFqYCxtc88uXVD6ZWfL3NOPLnxav+6ycd/n QPYq10lbJF22TvkaX1Jd1HnyiGC2o9k5/T1XTyuYykRf2JQiKr2k++DaXwfLb6sFXbPs/69/ 0F7VWKf43oFLqZnPOTa6P3vBZPr87Eb5kr+sbbMfJ3awfNirz/SGoaBaTNM9vTc6kefuzZnt B6U+ySixFGckGmoxFxUnAgDvGLiDbAIAAA==",
+            "raw": "X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFrrJLMWRmVeSWpSXmKPExsWyRqisVTf4q0OKwebZUhZrv+xit1jSxWYx\n\t6fQBFgdmj52z7rJ7zHnznNnj3LYtLAHMUdw2SYklZcGZ6Xn6dgncGY9aDrIXTPCuuNJxkq2B\n\tcYpnFyMnh4SAicS69dvZuhi5OIQE5jNKHFt2gR3CWcsocfTjSmY4Z+7fxawgLUIC6xglVvyU\n\tALE5BQIlLm28zQpVxCzRdegxE0hCWMBYYlfre3aIHZ4SVw+vBYuLCMhLfHxyiQ3EZhZwl/j1\n\trwXM5hUIkrh1fCYjiM0mICmxrWMBWJxFQFVi5+37LBA1ghInZz5hgehVl5g0bxEzhK0oMW1R\n\tA+MERsFZSMpmISmbhaRsASPzKkaRlPzc9MSSVANDveKSxJSSlHy9lNRNjKAwlmNW3cH4cavX\n\tIUYmDsZDjBIczEoivGdcrVKEeFMSK6tSi/Lji0pzUosPMUpzsCiJ807+9yZZSABkWHZqakFq\n\tEUyWiYMTpJtLSqQ4NS8ltSixtCQjHhQh8cXAGJFqYCxtc88uXVD6ZWfL3NOPLnxav+6ycd/n\n\tQPYq10lbJF22TvkaX1Jd1HnyiGC2o9k5/T1XTyuYykRf2JQiKr2k++DaXwfLb6sFXbPs/69/\n\t0F7VWKf43oFLqZnPOTa6P3vBZPr87Eb5kr+sbbMfJ3awfNirz/SGoaBaTNM9vTc6kefuzZnt\n\tB6U+ySixFGckGmoxFxUnAgDvGLiDbAIAAA=="
+          }
+        ],
+        "content_type": "text/plain",
+        "content_type_params": {
+          "charset": "UTF-8"
+        },
+        "content_disposition": null,
+        "content_disposition_params": {},
+        "transfer_encoding": "base64",
+        "children": [],
+        "body": "Guten Morgen Frau Belnikolova,\r\n\r\nich habe mich heute nochmal mit Herrn Bartoschek ausgetauscht und möchte\r\nSie und Herrn Pasev gerne zu einem persönlichen Gespräch mit Dolmetscher\r\neinladen, damit wir nochmal erörtern können, was genau vorgeschlagen wurde.\r\n\r\nKommen Sie hierfür bitte am\r\n\r\nFreitag, 05.05.23 um 10:00 Uhr zu mir ins Büro in der Leopoldstraße 16-20,\r\nZimmer 316.\r\n\r\nDanke und viele Grüße,\r\n\r\nL. Blömer\r\nSozialarbeiterin B.A.\r\nJugendhilfedienst Innenstadt Nord-Nordmarkt\r\nLeopoldstr. 16-20\r\n44145 Dortmund\r\n\r\n0231-50-26921\r\nlbloemer@stadtdo.de\r\n\r\n\r\n\r\nVon:        \"Kristi Belnikolova\" <kristibelnikolova@gmail.com>\r\nAn:         lbloemer@stadtdo.de, kontakt@institut-bartoschek.de,\r\n            bahceci@schoepper-und-kollegen.de\r\nDatum:      17.04.2023 11:40\r\nBetreff:    Re: Re: Fwd: Antrag Familienhilfe\r\n\r\n\r\n\r\nWie kann das nicht wahr sein. Herr Bartoschek hat mir ausdrücklich gesagt,\r\nich solle Ihnen innerhalb von sieben Tagen über dieses Dokument schreiben,\r\ndas Sie vorlegen sollen. Diese E-Mails sind an ihn und meinen Anwalt\r\ngerichtet. Wieder machen Sie Ihre Arbeit nicht.\r\n\r\nНа пн, 17.04.2023 г., 11:28 ч. <lbloemer@stadtdo.de> написа:\r\n      Guten Tag,\r\n\r\n      nein, so haben wir das nicht besprochen. Was ich meinte war, dass\r\n      eine\r\n      Möglichkeit, die bei Gericht nach Abschluss des Gutachtens ggf.\r\n      erörtert\r\n      werden könnte sein kann, dass VOR einer Rückführung bereits für einen\r\n      Zeitraum von drei Monaten eine ambulante Hilfe zur Erziehung in Form\r\n      einer\r\n      sozialpädagogischen Familienhilfe bei Ihnen eingesetzt würde, um\r\n      darüber\r\n      einschätzen zu können, ob eine solche Hilfe zielführend angenommen\r\n      wird und\r\n      dadurch Ihre erzieherischen Fähigkeiten soweit gestärkt werden\r\n      können, dass\r\n      eine Rückführung erfolgen kann.\r\n\r\n      Zunächst muss das Gutachten abgeschlossen werden und dann wird der\r\n      Richter\r\n      einen neuen Anhörungstermin anberaumen, bei dem eben solche\r\n      Möglichkeiten\r\n      oder eben andere, je nach Ergebnis des Gutachtens, gemeinsam erörtert\r\n      werden.\r\n\r\n      Freundliche Grüße\r\n      L. Blömer\r\n      Sozialarbeiterin B.A.\r\n      Jugendhilfedienst Innenstadt Nord-Nordmarkt\r\n      Leopoldstr. 16-20\r\n      44145 Dortmund\r\n\r\n      0231-50-26921\r\n      lbloemer@stadtdo.de\r\n\r\n\r\n\r\n      Von:        \"Kristi Belnikolova\" <kristibelnikolova@gmail.com>\r\n      An:         lbloemer@stadtdo.de, kontakt@institut-bartoschek.de,\r\n                  bahceci@schoepper-und-kollegen.de\r\n      Datum:      17.04.2023 10:41\r\n      Betreff:    Re: Fwd: Antrag Familienhilfe\r\n\r\n\r\n\r\n      Sehr geehrte Damen und Herren,\r\n\r\n\r\n      Herr Bartoschek hat mir mitgeteilt, dass Sie und er darüber\r\n      gesprochen\r\n      haben, dass Nikolai für drei Monate nach Hause kommen und wir eine\r\n      Beobachtung durch eine externe Person durchführen sollen. Und wenn\r\n      alles\r\n      gut geht, soll er dauerhaft bei uns bleiben. Ich weiß nicht, was\r\n      Ihnen noch\r\n      unklar ist. Angenommen, es wurde mit Ihnen über diese Angelegenheit\r\n      gesprochen. Es handelt sich um FamilieHilfe. Sie müssen uns ein\r\n      Dokument\r\n      für diese Hilfe ausstellen.\r\n\r\n\r\n      Mit freundlichen Grüßen\r\n\r\n\r\n\r\n      На пн, 17.04.2023 г., 10:32 ч. <lbloemer@stadtdo.de> написа:\r\n            Guten Tag Frau Belnikolova,\r\n\r\n            da ich heute aus dem Urlaub zurückgekommen bin, konnte ich Ihre\r\n      Mail\r\n            leider\r\n            nicht eher beantworten.\r\n\r\n            Mir ist leider nicht ganz klar, was für eine Art Hilfe Sie\r\n      meinen -\r\n            Sie\r\n            erhalten ja bereits eine Hilfe zur Erziehung gem. § 34 SGB\r\n      VIII, die\r\n            Sie\r\n            beantragt hatten.\r\n            Vielleicht können Sie oder Herr Bartoschek sich ja einmal\r\n      telefonisch\r\n            bei\r\n            mir melden und verdeutlichen, was Sie gemeinsam besprochen\r\n      haben.\r\n\r\n            Freundliche Grüße\r\n            L. Blömer\r\n            Sozialarbeiterin B.A.\r\n            Jugendhilfedienst Innenstadt Nord-Nordmarkt\r\n            Leopoldstr. 16-20\r\n            44145 Dortmund\r\n\r\n            0231-50-26921\r\n            lbloemer@stadtdo.de\r\n\r\n\r\n\r\n            Von:        \"Kristi Belnikolova\" <kristibelnikolova@gmail.com>\r\n            An:         bahceci@schoepper-und-kollegen.de,\r\n                        kontakt@institut-bartoschek.de, lbloemer@stadtdo.de\r\n            Datum:      05.04.2023 09:12\r\n            Betreff:    Fwd: Antrag Familienhilfe\r\n\r\n\r\n\r\n                                     Sehr geehrte Frau Blümer,\r\n\r\n\r\n              am 30.03.2023 um 13:00 Uhr führten wir ein Konferenzgespräch\r\n      mit\r\n            Herrn\r\n            Bartoschek durch, in dem deutlich wurde, dass wir nach seinem\r\n            Gespräch mit\r\n             dem Jugendamt Anspruch auf Familien Hilfe haben. Herr\r\n      Bartoschek\r\n            wies uns\r\n              darauf hin, dass dies innerhalb von 7 Tagen geschehen muss\r\n      und dass\r\n            wir\r\n                              dies genau von Ihnen anfordern müssen.\r\n\r\n\r\n            Bitte bereiten Sie die erforderlichen Dokumente vor und senden\r\n      Sie\r\n            sie per\r\n             Post an die Adresse \"Münsterstr. 177, 44145 Dortmund\" oder per\r\n            E-Mail an\r\n                        die folgende Adresse \"kristibelnikolova@gmail.com\".\r\n\r\n\r\n                           Mit freundlichen Grüßen Kristiana Belnikolova\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n             Sehr geehrte Frau Blümer,\r\n\r\n\r\n\r\n             am 30.03.2023 um 13:00 Uhr führten wir ein Konferenzgespräch\r\n      mit\r\n            Herrn Bartoschek durch, in dem deutlich wurde, dass wir nach\r\n      seinem\r\n            Gespräch mit\r\n             dem Jugendamt Anspruch auf Familien Hilfe haben. Herr\r\n      Bartoschek\r\n            wies uns darauf hin, dass dies innerhalb von 7 Tagen geschehen\r\n      muss\r\n            und dass wir\r\n             dies genau von Ihnen anfordern müssen.\r\n\r\n\r\n\r\n             Bitte bereiten Sie die erforderlichen Dokumente vor und senden\r\n      Sie\r\n            sie per Post an die Adresse \"Münsterstr. 177, 44145 Dortmund\"\r\n      oder\r\n            per E-Mail an\r\n             die folgende Adresse \"kristibelnikolova@gmail.com\".\r\n\r\n\r\n\r\n             Mit freundlichen Grüßen Kristiana Belnikolova\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n            ---------- Forwarded message ---------\r\n            От: Kristi Belnikolova <kristibelnikolova@gmail.com>\r\n            Date: пт, 31.03.2023 г., 13:38 ч.\r\n            Subject: Antrag Familienhilfe\r\n            To: <lbloemer@stadtdo.de>, <kontakt@institut-bartoschek.de>, <\r\n            bahceci@schoepper-und-kollegen.de>\r\n\r\n\r\n\r\n",
+        "body_hashes": {
+          "crc32": "3ac3bd88",
+          "md5": "b2ab32458e3be2af831a6d12cb42c9eb",
+          "sha1": "7684dec81fdcb7db0501675b6f9393f066b3ffd8",
+          "sha256": "abe0e1c0d8a90d1d4f1b6706a4d1d0abf377c875ae254a5884fd35b2b1b7704f",
+          "sha512": "4a416c8252404d75f975302992bca0170b726a3f3fb2a3c41b2159c442c5e41c3bae90db3c0c8614d000c2611818be0d335400e116a14f854a2519a68b2ff665"
+        },
+        "filename": null
+      },
+      "part_count": 1,
+      "text_part_count": 1,
+      "attachment_count": 0
+    },
+    "content": {
+      "decoded_text": "Guten Morgen Frau Belnikolova,\r\n\r\nich habe mich heute nochmal mit Herrn Bartoschek ausgetauscht und möchte\r\nSie und Herrn Pasev gerne zu einem persönlichen Gespräch mit Dolmetscher\r\neinladen, damit wir nochmal erörtern können, was genau vorgeschlagen wurde.\r\n\r\nKommen Sie hierfür bitte am\r\n\r\nFreitag, 05.05.23 um 10:00 Uhr zu mir ins Büro in der Leopoldstraße 16-20,\r\nZimmer 316.\r\n\r\nDanke und viele Grüße,\r\n\r\nL. Blömer\r\nSozialarbeiterin B.A.\r\nJugendhilfedienst Innenstadt Nord-Nordmarkt\r\nLeopoldstr. 16-20\r\n44145 Dortmund\r\n\r\n0231-50-26921\r\nlbloemer@stadtdo.de\r\n\r\n\r\n\r\nVon:        \"Kristi Belnikolova\" <kristibelnikolova@gmail.com>\r\nAn:         lbloemer@stadtdo.de, kontakt@institut-bartoschek.de,\r\n            bahceci@schoepper-und-kollegen.de\r\nDatum:      17.04.2023 11:40\r\nBetreff:    Re: Re: Fwd: Antrag Familienhilfe\r\n\r\n\r\n\r\nWie kann das nicht wahr sein. Herr Bartoschek hat mir ausdrücklich gesagt,\r\nich solle Ihnen innerhalb von sieben Tagen über dieses Dokument schreiben,\r\ndas Sie vorlegen sollen. Diese E-Mails sind an ihn und meinen Anwalt\r\ngerichtet. Wieder machen Sie Ihre Arbeit nicht.\r\n\r\nНа пн, 17.04.2023 г., 11:28 ч. <lbloemer@stadtdo.de> написа:\r\n      Guten Tag,\r\n\r\n      nein, so haben wir das nicht besprochen. Was ich meinte war, dass\r\n      eine\r\n      Möglichkeit, die bei Gericht nach Abschluss des Gutachtens ggf.\r\n      erörtert\r\n      werden könnte sein kann, dass VOR einer Rückführung bereits für einen\r\n      Zeitraum von drei Monaten eine ambulante Hilfe zur Erziehung in Form\r\n      einer\r\n      sozialpädagogischen Familienhilfe bei Ihnen eingesetzt würde, um\r\n      darüber\r\n      einschätzen zu können, ob eine solche Hilfe zielführend angenommen\r\n      wird und\r\n      dadurch Ihre erzieherischen Fähigkeiten soweit gestärkt werden\r\n      können, dass\r\n      eine Rückführung erfolgen kann.\r\n\r\n      Zunächst muss das Gutachten abgeschlossen werden und dann wird der\r\n      Richter\r\n      einen neuen Anhörungstermin anberaumen, bei dem eben solche\r\n      Möglichkeiten\r\n      oder eben andere, je nach Ergebnis des Gutachtens, gemeinsam erörtert\r\n      werden.\r\n\r\n      Freundliche Grüße\r\n      L. Blömer\r\n      Sozialarbeiterin B.A.\r\n      Jugendhilfedienst Innenstadt Nord-Nordmarkt\r\n      Leopoldstr. 16-20\r\n      44145 Dortmund\r\n\r\n      0231-50-26921\r\n      lbloemer@stadtdo.de\r\n\r\n\r\n\r\n      Von:        \"Kristi Belnikolova\" <kristibelnikolova@gmail.com>\r\n      An:         lbloemer@stadtdo.de, kontakt@institut-bartoschek.de,\r\n                  bahceci@schoepper-und-kollegen.de\r\n      Datum:      17.04.2023 10:41\r\n      Betreff:    Re: Fwd: Antrag Familienhilfe\r\n\r\n\r\n\r\n      Sehr geehrte Damen und Herren,\r\n\r\n\r\n      Herr Bartoschek hat mir mitgeteilt, dass Sie und er darüber\r\n      gesprochen\r\n      haben, dass Nikolai für drei Monate nach Hause kommen und wir eine\r\n      Beobachtung durch eine externe Person durchführen sollen. Und wenn\r\n      alles\r\n      gut geht, soll er dauerhaft bei uns bleiben. Ich weiß nicht, was\r\n      Ihnen noch\r\n      unklar ist. Angenommen, es wurde mit Ihnen über diese Angelegenheit\r\n      gesprochen. Es handelt sich um FamilieHilfe. Sie müssen uns ein\r\n      Dokument\r\n      für diese Hilfe ausstellen.\r\n\r\n\r\n      Mit freundlichen Grüßen\r\n\r\n\r\n\r\n      На пн, 17.04.2023 г., 10:32 ч. <lbloemer@stadtdo.de> написа:\r\n            Guten Tag Frau Belnikolova,\r\n\r\n            da ich heute aus dem Urlaub zurückgekommen bin, konnte ich Ihre\r\n      Mail\r\n            leider\r\n            nicht eher beantworten.\r\n\r\n            Mir ist leider nicht ganz klar, was für eine Art Hilfe Sie\r\n      meinen -\r\n            Sie\r\n            erhalten ja bereits eine Hilfe zur Erziehung gem. § 34 SGB\r\n      VIII, die\r\n            Sie\r\n            beantragt hatten.\r\n            Vielleicht können Sie oder Herr Bartoschek sich ja einmal\r\n      telefonisch\r\n            bei\r\n            mir melden und verdeutlichen, was Sie gemeinsam besprochen\r\n      haben.\r\n\r\n            Freundliche Grüße\r\n            L. Blömer\r\n            Sozialarbeiterin B.A.\r\n            Jugendhilfedienst Innenstadt Nord-Nordmarkt\r\n            Leopoldstr. 16-20\r\n            44145 Dortmund\r\n\r\n            0231-50-26921\r\n            lbloemer@stadtdo.de\r\n\r\n\r\n\r\n            Von:        \"Kristi Belnikolova\" <kristibelnikolova@gmail.com>\r\n            An:         bahceci@schoepper-und-kollegen.de,\r\n                        kontakt@institut-bartoschek.de, lbloemer@stadtdo.de\r\n            Datum:      05.04.2023 09:12\r\n            Betreff:    Fwd: Antrag Familienhilfe\r\n\r\n\r\n\r\n                                     Sehr geehrte Frau Blümer,\r\n\r\n\r\n              am 30.03.2023 um 13:00 Uhr führten wir ein Konferenzgespräch\r\n      mit\r\n            Herrn\r\n            Bartoschek durch, in dem deutlich wurde, dass wir nach seinem\r\n            Gespräch mit\r\n             dem Jugendamt Anspruch auf Familien Hilfe haben. Herr\r\n      Bartoschek\r\n            wies uns\r\n              darauf hin, dass dies innerhalb von 7 Tagen geschehen muss\r\n      und dass\r\n            wir\r\n                              dies genau von Ihnen anfordern müssen.\r\n\r\n\r\n            Bitte bereiten Sie die erforderlichen Dokumente vor und senden\r\n      Sie\r\n            sie per\r\n             Post an die Adresse \"Münsterstr. 177, 44145 Dortmund\" oder per\r\n            E-Mail an\r\n                        die folgende Adresse \"kristibelnikolova@gmail.com\".\r\n\r\n\r\n                           Mit freundlichen Grüßen Kristiana Belnikolova\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n             Sehr geehrte Frau Blümer,\r\n\r\n\r\n\r\n             am 30.03.2023 um 13:00 Uhr führten wir ein Konferenzgespräch\r\n      mit\r\n            Herrn Bartoschek durch, in dem deutlich wurde, dass wir nach\r\n      seinem\r\n            Gespräch mit\r\n             dem Jugendamt Anspruch auf Familien Hilfe haben. Herr\r\n      Bartoschek\r\n            wies uns darauf hin, dass dies innerhalb von 7 Tagen geschehen\r\n      muss\r\n            und dass wir\r\n             dies genau von Ihnen anfordern müssen.\r\n\r\n\r\n\r\n             Bitte bereiten Sie die erforderlichen Dokumente vor und senden\r\n      Sie\r\n            sie per Post an die Adresse \"Münsterstr. 177, 44145 Dortmund\"\r\n      oder\r\n            per E-Mail an\r\n             die folgende Adresse \"kristibelnikolova@gmail.com\".\r\n\r\n\r\n\r\n             Mit freundlichen Grüßen Kristiana Belnikolova\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n            ---------- Forwarded message ---------\r\n            От: Kristi Belnikolova <kristibelnikolova@gmail.com>\r\n            Date: пт, 31.03.2023 г., 13:38 ч.\r\n            Subject: Antrag Familienhilfe\r\n            To: <lbloemer@stadtdo.de>, <kontakt@institut-bartoschek.de>, <\r\n            bahceci@schoepper-und-kollegen.de>\r\n\r\n\r\n\r\n",
+      "decoded_text_sha256": "abe0e1c0d8a90d1d4f1b6706a4d1d0abf377c875ae254a5884fd35b2b1b7704f",
+      "raw_body_sha256": "d973b83ccc4193330a35e7ef87373fc033a01d758850cfe206f5b52bc2b9a073"
+    },
+    "attachments": []
+  },
+  "rendering": {},
+  "geometry": {
+    "lines": [],
+    "search_zones": [],
+    "object_boundaries": []
+  },
+  "objects": [],
+  "ocr": {
+    "observation_sets": [],
+    "word_clusters": [],
+    "disagreements": []
+  },
+  "profiles": {
+    "document": [],
+    "identity": []
+  },
+  "hash_selection": {
+    "selections": []
+  },
+  "hashes": {
+    "source": {
+      "crc32": "7e8ea516",
+      "md5": "532bb914be80171ae241259aafd75730",
+      "sha1": "c101f2e7e93d474aa52afdeb59efde1a67a02821",
+      "sha256": "a43a6b94fc78f162795e608cf3303394b4e2c780e6acdc2faeb5957f29b58d16",
+      "sha512": "0745ce2a25bf676ebba23be166f9660f43e9663519b36f7cca9b39449b264bb20018d6c521fb96e9e976c6291330e0e5d89f68b084b99fd751d950bd5b0ef3dd"
+    },
+    "email_metadata_sha256": "e04d03dc4e395a28194d064ae6bc4626e86b79c3ec0a0da520d2d091213777d5"
+  },
+  "anonymization": {
+    "policies": [],
+    "preview": [],
+    "redaction_plans": []
+  },
+  "provenance": {
+    "nodes": [
+      {
+        "id": "SOURCE-EML",
+        "type": "source.email",
+        "sha256": "a43a6b94fc78f162795e608cf3303394b4e2c780e6acdc2faeb5957f29b58d16",
+        "filename": "2023_04_20_-_08_18_-_CAF8B92E_-_MAIL_RE3_FWD1_-_Antrag_Familienhilfe_-_lbloemer@stadtdo.de.eml"
+      },
+      {
+        "id": "RECEIVED-01",
+        "type": "email.transport_hop",
+        "hop": {
+          "index": 0,
+          "raw": "by 2002:aa6:c3a8:0:b0:258:b864:78 with SMTP id a8csp231886lkq; Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "from": null,
+          "by": "2002:aa6:c3a8:0:b0:258:b864:78",
+          "ip_addresses": [],
+          "id": "a8csp231886lkq",
+          "protocol": "SMTP",
+          "tls": null,
+          "timestamp_raw": "Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        }
+      },
+      {
+        "id": "RECEIVED-02",
+        "type": "email.transport_hop",
+        "hop": {
+          "index": 1,
+          "raw": "from domgate01.stadtdo.de (mail.stadtdo.de. [45.82.172.40]) by mx.google.com with ESMTPS id m5-20020a7bce05000000b003ee4d160f3csi3138990wmc.212.2023.04.20.01.18.27 for <kristibelnikolova@gmail.com> (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128); Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "from": "domgate01.stadtdo.de",
+          "by": "mx.google.com",
+          "ip_addresses": [
+            "45.82.172.40"
+          ],
+          "id": "m5-20020a7bce05000000b003ee4d160f3csi3138990wmc.212.2023.04.20.01.18.27",
+          "protocol": "ESMTPS",
+          "tls": {
+            "version": "TLS1_2",
+            "cipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+            "bits": "128/128"
+          },
+          "timestamp_raw": "Thu, 20 Apr 2023 01:18:27 -0700 (PDT)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        }
+      },
+      {
+        "id": "RECEIVED-03",
+        "type": "email.transport_hop",
+        "hop": {
+          "index": 2,
+          "raw": "from domgate0.stadtdo.de ( [172.18.118.133]) by domgate01.stadtdo.de (DO) with SMTP id DA.C8.03368.355F0446; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "from": "domgate0.stadtdo.de",
+          "by": "domgate01.stadtdo.de",
+          "ip_addresses": [
+            "172.18.118.133"
+          ],
+          "id": "DA.C8.03368.355F0446",
+          "protocol": "SMTP",
+          "tls": null,
+          "timestamp_raw": "Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        }
+      },
+      {
+        "id": "RECEIVED-04",
+        "type": "email.transport_hop",
+        "hop": {
+          "index": 3,
+          "raw": "from bkpvps02.stadtdo.de (bkpvps02.stadtdo.de [172.30.14.53]) by domgate0.stadtdo.de (Postfix) with ESMTP id 536A74A014; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "from": "bkpvps02.stadtdo.de",
+          "by": "domgate0.stadtdo.de",
+          "ip_addresses": [
+            "172.30.14.53"
+          ],
+          "id": "536A74A014",
+          "protocol": "ESMTP",
+          "tls": null,
+          "timestamp_raw": "Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        }
+      },
+      {
+        "id": "RECEIVED-05",
+        "type": "email.transport_hop",
+        "hop": {
+          "index": 4,
+          "raw": "from bkpvps02.stadtdo.de (localhost.localdomain [127.0.0.1]) by bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2D79AA013E; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "from": "bkpvps02.stadtdo.de",
+          "by": "bkpvps02.stadtdo.de",
+          "ip_addresses": [
+            "127.0.0.1"
+          ],
+          "id": "2D79AA013E",
+          "protocol": "ESMTPS",
+          "tls": null,
+          "timestamp_raw": "Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        }
+      },
+      {
+        "id": "RECEIVED-06",
+        "type": "email.transport_hop",
+        "hop": {
+          "index": 5,
+          "raw": "from domint1.stadtdo.de (bknginx01.stadtdo.de [172.30.14.56]) by bkpvps02.stadtdo.de (Postfix) with ESMTPS id 2929FA00A1; Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "from": "domint1.stadtdo.de",
+          "by": "bkpvps02.stadtdo.de",
+          "ip_addresses": [
+            "172.30.14.56"
+          ],
+          "id": "2929FA00A1",
+          "protocol": "ESMTPS",
+          "tls": null,
+          "timestamp_raw": "Thu, 20 Apr 2023 10:18:27 +0200 (CEST)",
+          "timestamp_iso": "2023-04-20T08:18:27.000Z"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "from": "SOURCE-EML",
+        "to": "RECEIVED-01",
+        "relation": "contains_header_evidence"
+      },
+      {
+        "from": "SOURCE-EML",
+        "to": "RECEIVED-02",
+        "relation": "contains_header_evidence"
+      },
+      {
+        "from": "SOURCE-EML",
+        "to": "RECEIVED-03",
+        "relation": "contains_header_evidence"
+      },
+      {
+        "from": "SOURCE-EML",
+        "to": "RECEIVED-04",
+        "relation": "contains_header_evidence"
+      },
+      {
+        "from": "SOURCE-EML",
+        "to": "RECEIVED-05",
+        "relation": "contains_header_evidence"
+      },
+      {
+        "from": "SOURCE-EML",
+        "to": "RECEIVED-06",
+        "relation": "contains_header_evidence"
+      }
+    ]
+  },
+  "audit": {
+    "events": [
+      {
+        "type": "EML_PARSED",
+        "source_sha256": "a43a6b94fc78f162795e608cf3303394b4e2c780e6acdc2faeb5957f29b58d16",
+        "header_count": 32,
+        "received_hops": 6,
+        "mime_parts": 1
+      }
+    ],
+    "warnings": [],
+    "release_gate": "NOT_VERIFIED"
+  }
+}

@@ -1,0 +1,14 @@
+package:
+  id: 12-cli-build
+  runtime: node
+dependencies:
+  enabled: true
+  packageManager: auto
+  includeDevDependencies: true
+  installMode: install
+settings:
+  outputDirectory: dist
+  cleanBeforeBuild: false
+  minify: true
+  sourceMaps: false
+  maxParallelJobs: 4
