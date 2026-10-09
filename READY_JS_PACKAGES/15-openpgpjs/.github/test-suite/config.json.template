@@ -1,0 +1,40 @@
+{
+    "drivers": [
+      {
+        "id": "sop-openpgpjs-branch",
+        "path": "__SOP_OPENPGPJS__",
+        "env": {
+          "OPENPGPJS_PATH": "__OPENPGPJS_BRANCH__",
+          "OPENPGPJS_CUSTOM_PROFILES": "{\"generate-key\": { \"post-quantum\": { \"description\": \"generate post-quantum v6 keys (relying on ML-DSA + ML-KEM)\", \"options\": { \"type\": \"pqc\", \"config\": { \"v6Keys\": true } } } } }"
+        }
+      },
+      {
+        "id": "sop-openpgpjs-main",
+        "path": "__SOP_OPENPGPJS__",
+        "env": {
+          "OPENPGPJS_PATH": "__OPENPGPJS_MAIN__",
+          "DISABLE_PROFILES": "true"
+        }
+      },
+      {
+        "path": "__SQOP__"
+      },
+      {
+        "path": "__GPGME_SOP__"
+      },
+      {
+        "id": "gosop-v2",
+        "path": "__GOSOP_V2__"
+      },
+      {
+        "path": "__RNP_SOP__"
+      },
+      {
+        "path": "__RSOP__"
+      }
+    ],
+    "rlimits": {
+      "DATA": 1073741824
+    }
+}
+  

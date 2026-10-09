@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs');
+const path=require('node:path');
+const {spawnSync}=require('node:child_process');
+const usage=`14-archive-tools CLI
+  node cli.js verify <archive.json>
+  node cli.js check-builder [--config config.json]
+  node cli.js test
+  node cli.js build --config <config.json> [--dry-run] [--start YYYY-MM-DD] [--end YYYY-MM-DD]
+Copy config.example.json to config.json, set a bounded date range, then review network and OTS settings before building.`;
+function main(args){const[command,...rest]=args;if(!command||['help','--help','-h'].includes(command)){console.log(usage);return}if(command==='verify'){if(!rest.length||rest[0].startsWith('--'))throw new Error(usage);const result=spawnSync(process.execPath,[path.join(__dirname,'verify-archive.js'),'--file',rest[0],...rest.slice(1)],{stdio:'inherit'});if(result.error)throw result.error;process.exitCode=result.status??1;return}if(command==='check-builder'){let config=process.env.ARCHIVE_CONFIG||path.join(__dirname,'config.json');for(let i=0;i<rest.length;i++){if(rest[i]==='--config'&&rest[i+1])config=path.resolve(rest[++i]);else throw new Error(`Unknown option: ${rest[i]}`)}const required=['lib/checkpoint.js','lib/manifest.js','lib/mempool.js','lib/ots.js'];const status=[{file:path.relative(__dirname,config),present:fs.existsSync(config)},...required.map(file=>({file,present:fs.existsSync(path.join(__dirname,file))}))];console.log(JSON.stringify({ready:status.every(item=>item.present),dependencies:status},null,2));if(status.some(item=>!item.present))process.exitCode=2;return}if(command==='test'){const result=spawnSync(process.execPath,['--test',path.join(__dirname,'test.test.js')],{stdio:'inherit',cwd:__dirname});if(result.error)throw result.error;process.exitCode=result.status??1;return}if(command==='build'){let config=process.env.ARCHIVE_CONFIG;const forwarded=[];for(let i=0;i<rest.length;i++){if(rest[i]==='--config'){if(!rest[i+1])throw new Error('Missing path after --config');config=path.resolve(rest[++i])}else forwarded.push(rest[i])}if(!config)throw new Error('Build requires --config <path>; use config.example.json as a starting point.');if(!fs.existsSync(config))throw new Error(`Config not found: ${config}`);const env={...process.env,ARCHIVE_CONFIG:path.resolve(config)};const result=spawnSync(process.execPath,[path.join(__dirname,'manifest-builder.js'),...forwarded],{stdio:'inherit',env,cwd:process.cwd()});if(result.error)throw result.error;process.exitCode=result.status??1;return}throw new Error(`Unknown command: ${command}`)}
+try{main(process.argv.slice(2))}catch(error){console.error(`archive-tools: ${error.message}`);process.exitCode=1}

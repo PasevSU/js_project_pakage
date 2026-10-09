@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+import { Transactions } from './index.js';
+
+const usage=`04-transactions CLI
+  node cli.js page <url-template> [--page N] [--size N]
+URL templates may contain {page} and {size}; otherwise page and limit query parameters are added.
+Example: node cli.js page "https://mempool.space/api/address/ADDRESS/txs/chain/{page}" --page 1 --size 25`;
+function options(args){let page=1,size=100;for(let i=0;i<args.length;i++){if(args[i]==='--page')page=Number(args[++i]);else if(args[i]==='--size')size=Number(args[++i]);else throw new Error(`Unknown option: ${args[i]}`)}if(!Number.isSafeInteger(page)||page<1||!Number.isSafeInteger(size)||size<1||size>1000)throw new Error('Page and size must be positive integers; size cannot exceed 1000.');return{page,size}}
+async function main(args){const [command,target,...rest]=args;if(!command||command==='help'||command==='--help'||command==='-h'){console.log(usage);return}if(command!=='page'||!target||rest.length>4)throw new Error(usage);const config=options(rest);const template=target;const fetchPage=async(page,size,etag)=>{const urlText=template.includes('{page}')||template.includes('{size}')?template.replaceAll('{page}',String(page)).replaceAll('{size}',String(size)):appendQuery(template,{page,limit:size});const response=await fetch(urlText,{headers:etag?{'If-None-Match':etag}:{}});if(response.status===304)return{notModified:true,etag};if(!response.ok)throw new Error(`HTTP ${response.status} ${response.statusText} for page ${page}`);const items=await response.json();return{items,etag:response.headers.get('etag'),status:response.status}};const transactions=new Transactions({fetchPage,pageSize:config.size,prefetch:0});const result=await transactions.getPage(config.page);console.log(JSON.stringify(result,null,2))}
+function appendQuery(value,query){const url=new URL(value);for(const [key,val]of Object.entries(query))url.searchParams.set(key,String(val));return url.toString()}
+main(process.argv.slice(2)).catch(error=>{console.error(`transactions: ${error.message}`);process.exitCode=1});

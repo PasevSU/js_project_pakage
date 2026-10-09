@@ -1,0 +1,14 @@
+{
+  "name": "pasevsu-transactions",
+  "private": true,
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./pagination": "./pagination.js",
+    "./cache": "./transaction-cache.js"
+  },
+  "bin": {
+    "pasevsu-transactions": "./cli.js"
+  }
+}

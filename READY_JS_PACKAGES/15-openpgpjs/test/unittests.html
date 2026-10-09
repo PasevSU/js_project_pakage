@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OpenPGPJS Unit Tests</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <script type="module">
+      import { mocha, sessionFinished, sessionFailed } from '@web/test-runner-mocha';
+
+      try {
+        // setup mocha
+        mocha.setup({
+          ui: 'bdd',
+          timeout: 60000
+        });
+
+        await import('./lib/unittests-bundle.js')
+        // run the tests, and notify the test runner after finishing
+        mocha.run(() => {
+          sessionFinished();
+        });
+      } catch (error) {
+        console.error(error);
+        // notify the test runner about errors
+        sessionFailed(error);
+      }
+    </script>
+  </body>
+</html>

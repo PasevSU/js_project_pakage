@@ -1,0 +1,33 @@
+import testBigInteger from './biginteger.js';
+import testCipher from './cipher/index.js';
+import testHash from './hash/index.js';
+import testCrypto from './crypto.js';
+import testElliptic from './ecdsa_eddsa.js';
+import testECDH from './ecdh.js';
+import testPKCS5 from './pkcs5.js';
+import testAESKW from './aes_kw.js';
+import testHKDF from './hkdf.js';
+import testGCM from './gcm.js';
+import testEAX from './eax.js';
+import testOCB from './ocb.js';
+import testRSA from './rsa.js';
+import testValidate from './validate.js';
+import testPQC from './postQuantum.js';
+
+export default () => describe('Crypto', function () {
+  testBigInteger();
+  testCipher();
+  testHash();
+  testCrypto();
+  testElliptic();
+  testECDH();
+  testPKCS5();
+  testAESKW();
+  testHKDF();
+  testGCM();
+  testEAX();
+  testOCB();
+  testRSA();
+  testValidate();
+  testPQC();
+});

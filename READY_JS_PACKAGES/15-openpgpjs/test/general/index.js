@@ -1,0 +1,31 @@
+import testX25519 from './x25519.js';
+import testUtil from './util.js';
+import testArmor from './armor.js';
+import testPacket from './packet.js';
+import testSignature from './signature.js';
+import testKey from './key.js';
+import testOpenPGP from './openpgp.js';
+import testConfig from './config.js';
+import testOID from './oid.js';
+import testNistECC from './ecc_nist.js';
+import testSecp256k1 from './ecc_secp256k1.js';
+import testBrainpool from './brainpool.js';
+import testDecompression from './decompression.js';
+import testStreaming from './streaming.js';
+
+export default () => describe('General', function () {
+  testX25519();
+  testUtil();
+  testArmor();
+  testPacket();
+  testSignature();
+  testKey();
+  testOpenPGP();
+  testConfig();
+  testOID();
+  testNistECC();
+  testSecp256k1();
+  testBrainpool();
+  testDecompression();
+  testStreaming();
+});

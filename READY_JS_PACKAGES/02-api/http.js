@@ -1,0 +1,5 @@
+export class HttpClient {
+  constructor({baseUrl='',timeout=15000,headers={},fetchImpl=globalThis.fetch}={}){if(typeof fetchImpl!=='function')throw new Error('fetch implementation required');this.baseUrl=String(baseUrl).replace(/\/$/,'');this.timeout=timeout;this.headers={Accept:'application/json',...headers};this.fetch=fetchImpl;}
+  async request(path,{method='GET',headers={},body,signal}={}){const c=new AbortController(),t=setTimeout(()=>c.abort(),this.timeout);if(signal)signal.addEventListener('abort',()=>c.abort(),{once:true});try{const r=await this.fetch(`${this.baseUrl}${path}`,{method,headers:{...this.headers,...headers},body,signal:c.signal});const text=await r.text();let data=text;try{data=text?JSON.parse(text):null}catch{}if(!r.ok){const e=new Error(`HTTP ${r.status}: ${r.statusText}`);e.status=r.status;e.data=data;throw e;}return{data,status:r.status,headers:r.headers};}finally{clearTimeout(t);}}
+  get(path,o={}){return this.request(path,{...o,method:'GET'});} post(path,body,o={}){return this.request(path,{...o,method:'POST',headers:{'Content-Type':'application/json',...(o.headers||{})},body:JSON.stringify(body)});}
+}

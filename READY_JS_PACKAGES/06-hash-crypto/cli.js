@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const algorithms={md5:'md5.js',sha1:'sha1.js',sha224:'sha224.js',sha256:'sha256.js',sha384:'sha384.js',sha512:'sha512.js',sha3:'sha3.js',ripemd160:'ripemd160.js'};
+const usage=`06-hash-crypto CLI
+  node cli.js hash <${Object.keys(algorithms).join('|')}> <file>
+  node cli.js self-test`;
+function loadCryptoJS(algorithm){const context=vm.createContext({Math,Uint32Array,globalThis:{crypto:require('node:crypto').webcrypto}});const core=path.resolve(__dirname,'..','01-core','core.js');vm.runInContext(fs.readFileSync(core,'utf8'),context,{filename:core});if(['sha384','sha512','sha3'].includes(algorithm)){const x64=path.join(__dirname,'x64-core.js');vm.runInContext(fs.readFileSync(x64,'utf8'),context,{filename:x64})}const source=path.join(__dirname,algorithms[algorithm]);vm.runInContext(fs.readFileSync(source,'utf8'),context,{filename:source});return context.CryptoJS}
+function hash(algorithm,input){const cryptoJs=loadCryptoJS(algorithm),name=algorithm.toUpperCase(),helper=cryptoJs[name];if(typeof helper!=='function')throw new Error(`CryptoJS did not expose ${name}.`);let message=input;if(typeof input!=='string'){const words=[];for(let i=0;i<input.length;i++)words[i>>>2]=(words[i>>>2]||0)|(input[i]<<((3-(i%4))*8));message=cryptoJs.lib.WordArray.create(words,input.length)}return helper(message).toString()}
+function main(args){const[command,...rest]=args;if(!command||['help','--help','-h'].includes(command)){console.log(usage);return}if(command==='hash'){const[algorithm,file]=rest;if(!algorithms[algorithm]||!file||rest.length!==2)throw new Error(usage);const bytes=fs.readFileSync(file),digest=hash(algorithm,bytes);console.log(JSON.stringify({algorithm:algorithm.toUpperCase(),file,bytes:bytes.length,digest},null,2));return}if(command==='self-test'){for(const[algorithm,expected]of Object.entries({sha256:'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad',sha512:'ddaf35a193617abacc417349ae20413112e6fa4e89a97ea20a9eeee64b55d39a2192992a274fc1a836ba3c23a3feebbd454d4423643ce80e2a9ac94fa54ca49f'})){if(hash(algorithm,'abc')!==expected)throw new Error(`${algorithm} known-answer test failed.`)}console.log(JSON.stringify({ok:true,algorithms:['SHA256','SHA512']},null,2));return}throw new Error(`Unknown command: ${command}`)}
+try{main(process.argv.slice(2))}catch(error){console.error(`hash-crypto: ${error.message}`);process.exitCode=1}

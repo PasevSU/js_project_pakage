@@ -1,0 +1,16 @@
+import WebSocket from "ws";
+export declare const wsInit: (endpoint: string) => WebSocket;
+export declare const wsWantData: (ws: WebSocket, options: string[]) => void;
+export declare const wsStopData: (ws: WebSocket) => void;
+export declare const wsTrackAddress: (ws: WebSocket, address: string) => void;
+export declare const wsStopTrackingAddress: (ws: WebSocket) => void;
+export declare const wsTrackAddresses: (ws: WebSocket, addresses: string[]) => void;
+export declare const wsStopTrackingAddresses: (ws: WebSocket) => void;
+export declare const wsTrackTransaction: (ws: WebSocket, txid: string) => void;
+export declare const wsStopTrackingTransaction: (ws: WebSocket) => void;
+export declare const wsTrackRbfSummary: (ws: WebSocket) => void;
+export declare const wsStopTrackingRbfSummary: (ws: WebSocket) => void;
+export declare const wsTrackRbf: (ws: WebSocket, fullRbf: boolean) => void;
+export declare const wsStopTrackingRbf: (ws: WebSocket) => void;
+export declare const wsTrackMempoolBlock: (ws: WebSocket, index: number) => void;
+export declare const wsStopTrackingMempoolBlock: (ws: WebSocket) => void;
