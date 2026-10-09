@@ -1,6 +1,6 @@
 {
   "source": "_js_project_pak/new",
-  "file_count": 1043,
+  "file_count": 1051,
   "groups": {
     "01-core": [
       "advanced-core.js",
@@ -154,10 +154,10 @@
       "pad-nopadding.js",
       "pad-zeropadding.js",
       "pbkdf2.js",
-      "README.md",
       "rabbit-legacy.js",
       "rabbit.js",
       "rc4.js",
+      "README.md",
       "ripemd160.js",
       "sha1.js",
       "sha224.js",
@@ -332,12 +332,12 @@
       "mode-ctr-test.js",
       "mode-ecb-test.js",
       "mode-ofb-test.js",
+      "package-integrity.test.js",
       "pad-ansix923-test.js",
       "pad-iso10126-test.js",
       "pad-iso97971-test.js",
       "pad-pkcs7-test.js",
       "pad-zeropadding-test.js",
-      "package-integrity.test.js",
       "pbkdf2-profile.js",
       "pbkdf2-test.js",
       "pdf-report.test.js",
@@ -347,6 +347,7 @@
       "rabbit-test.js",
       "rc4-profile.js",
       "rc4-test.js",
+      "repo-manager.test.js",
       "ripemd160-test.js",
       "sha1-profile.js",
       "sha1-test.js",
@@ -950,6 +951,15 @@
       "test/ots-cli.sh",
       "test/timestamp.js",
       "test/utils.js"
+    ],
+    "18-repo-manager": [
+      "cli.js",
+      "configuration.yaml",
+      "get-configuration.ps1",
+      "install-dependencies.bat",
+      "install-dependencies.ps1",
+      "lib/repository.js",
+      "README.md"
     ],
     "90-legacy-pakages": [
       "cli.js",
