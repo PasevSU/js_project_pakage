@@ -9,9 +9,10 @@ dependencies:
 settings:
   pageSize: A4
   orientation: portrait
-  locale: en-US
+  locale: de-DE
+  timeZone: Europe/Berlin
   outputDirectory: reports
   title: Evidence report
   includeTimestamp: true
-  marginMm: 18
-  fontSizePt: 10
+  marginMm: 20
+  fontSizePt: 9

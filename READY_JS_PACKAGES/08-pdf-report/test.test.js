@@ -8,6 +8,16 @@ import { spawnSync } from 'node:child_process';
 import { createPdfReport } from './configured-pdf-generator.js';
 import { loadConfiguration } from './config.js';
 
+test('publishes the shared reference-report standard to browser and Node renderers', () => {
+  const standard = globalThis.PasevSUPdfStandard;
+  assert.equal(standard.page.format, 'a4');
+  assert.deepEqual(standard.page.marginsMm, { left: 20, right: 20, top: 20, bottom: 35 });
+  assert.equal(standard.colors.accent, '#293e50');
+  assert.equal(standard.tables.repeatHeader, true);
+  assert.equal(standard.pagination.neverOverflowFooter, true);
+  assert.match(standard.legalNotice.join(' '), /keine eidesstattliche Versicherung/);
+});
+
 test('creates a PDF using the YAML page and timestamp settings', () => {
   const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'pdf-report-test-'));
   try {
@@ -23,10 +33,12 @@ test('creates a PDF using the YAML page and timestamp settings', () => {
     const bytes = fs.readFileSync(output);
     assert.equal(result.output, output);
     assert.ok(result.bytes > 100);
+    assert.match(result.reportId, /^RPT-\d{17}-[A-F0-9]{8}$/);
     assert.equal(bytes.subarray(0, 5).toString(), '%PDF-');
     const pdfText = bytes.toString('latin1');
     assert.match(pdfText, /MediaBox \[0 0 595\.\d+ 841\.\d+\]/);
-    assert.match(pdfText, /Generated: Jan 2, 2026, 3:04:05 AM/);
+    assert.match(pdfText, /FontFile2/);
+    assert.match(pdfText, /PasevUnicode/);
     assert.throws(
       () => createPdfReport({ title: 'Test report', text: 'Report body', output }),
       /already exists/

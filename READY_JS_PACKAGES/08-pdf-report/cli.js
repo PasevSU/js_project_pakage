@@ -10,8 +10,9 @@ const usage = `08-pdf-report CLI
   node cli.js hash <report.json>
   node cli.js create --text TEXT [--title TITLE] [--output FILE]
 
-The browser report engine remains in pdf-generator.js. The create command uses
-the YAML-driven Node renderer and never overwrites an existing output file.`;
+The browser report engines load pdf-style-standard.js before rendering. The
+create command uses the YAML-driven Node renderer and never overwrites an
+existing output file.`;
 
 function canonical(value) {
   if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`;
