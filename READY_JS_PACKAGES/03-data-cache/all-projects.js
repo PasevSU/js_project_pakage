@@ -1,0 +1,171 @@
+// static/all-projects.js
+window.allProjectsData = [
+    // Проект 1: Zigbee
+    {
+      "id": 1,
+      "title": "🛜 Създаване и интегриране на Zigbee мрежа",
+      "platforms": ["ha", "web_inactive", "android_inactive"],
+      "image": "static/img/Zigbee_Network.gif",
+      "imageAlt": "Zigbee мрежа",
+      "advantages": [
+        "Работи без интернет с Zigbee2MQTT",
+        "Не натоварва интернет мрежата",
+        "Лесна инсталация и преместване на устройства",
+        "Zigbee устройствата действат като ретранслатори",
+        "Достъпен Zigbee хардуер",
+        "Възможност за ъпгрейд при натоварване на мрежата"
+      ],
+      "link": "https://github.com/PasevSU/HASS-ZigbeeNetwork.git",
+      "buttonText": "↪️ КЪМ ПРОЕКТА ▶️"
+    },
+    
+    // Проект 2: Shopping List
+    {
+      "id": 2,
+      "title": "🛒 Списък за пазаруване с изображения",
+      "platforms": ["ha", "web_inactive", "android_inactive"],
+      "image": "static/img/Projekt_shoplist.gif",
+      "imageAlt": "Списък за пазаруване",
+      "advantages": [
+        "Бързо намиране на артикули по категории",
+        "Визуална идентификация чрез изображения",
+        "Членовете на домакинството получават известия за нови артикули",
+        "Автоматично премахва отметнати артикули"
+      ],
+      "link": "https://github.com/PasevSU/HASS-shopping-list.git",
+      "buttonText": "↪️ КЪМ ПРОЕКТА ▶️"
+    },
+    
+    // Проект 3: WLED
+    {
+      "id": 3,
+      "title": "🎤🔉 WLED SoundReactive Интелигентно светлинно шоу",
+      "platforms": ["ha", "web", "android"],
+      "image": "static/img/WLED SaundReactive.gif",
+      "imageAlt": "WLED SoundReactive анимация",
+      "advantages": [
+        "Реакция в реално време извън човешкото възприятие",
+        "Автоматично регулиране на чувствителността на микрофона",
+        "Ниска цена и енергийна ефективност",
+        "Пълен WLED мод с официални функции на фърмуера",
+        "Уеб интерфейс и мобилни приложения — съвместими с Home Assistant"
+      ],
+      "link": "https://github.com/PasevSU/WLED_SoundReactive_Light_Show.git",
+      "buttonText": "↪️ КЪМ ПРОЕКТА ▶️"
+    },
+    
+    // Проект 4: Tasmota
+    {
+      "id": 4,
+      "title": "🤖 TASMOTA – Интеграция и устройства",
+      "platforms": ["ha", "web", "android"],
+      "image": "static/img/Tasmota-banner.png",
+      "imageAlt": "Tasmota устройства",
+      "advantages": [
+        "Пълен контрол върху устройствата",
+        "Независимо от интернет връзка",
+        "Моментален контрол чрез TASMOTA, Home Assistant и Alexa",
+        "Не натоварва интернет мрежата"
+      ],
+      "link": "https://github.com/PasevSU/HASS-TASMOTA.git",
+      "buttonText": "↪️ КЪМ ПРОЕКТА ▶️"
+    },
+    
+    // Проект 5: HASS 2 Zigbee
+    {
+      "id": 5,
+      "title": "🏠 HASS с две Zigbee мрежи",
+      "platforms": ["ha", "web_inactive", "android_inactive"],
+      "image": "static/img/benner_2zigbee.png",
+      "imageAlt": "Две Zigbee мрежи",
+      "advantages": [
+        "Поддържа повече устройства",
+        "Разделяне на товар/функции",
+        "Подобрено тестване за съвместимост",
+        "Гъвкава миграция и експериментиране"
+      ],
+      "link": "https://github.com/PasevSU/HASS-2-ZigbeeNetworks.git",
+      "buttonText": "↪️ КЪМ ПРОЕКТА ▶️"
+    },
+    
+    // Проект 6: Voice
+    {
+      "id": 6,
+      "title": "🎙️ Гласово управление на HASS устройства (Alexa / Google Home)",
+      "platforms": ["ha", "web_inactive", "android", "alexa", "google"],
+      "image": "static/img/MATTERHUB_banner.png",
+      "imageAlt": "Гласово управление интеграция",
+      "advantages": [
+        "Управление на автоматизации и скриптове с глас",
+        "Управление на устройства и мониторинг чрез глас",
+        "Лесно добавяне и премахване на устройства"
+      ],
+      "link": "https://github.com/PasevSU/HASS-Voice-Control.git",
+      "buttonText": "↪️ КЪМ ПРОЕКТА ▶️"
+    },
+    
+    // Проект 7: Fingerbot
+    {
+      "id": 7,
+      "title": "🖲️ Управление на Zigbee Fingerbot чрез NFC и Home Assistant",
+      "platforms": ["ha", "android"],
+      "image": "static/img/banner_HASS-Fingerbot-NFC-Door.png",
+      "imageAlt": "Fingerbot NFC врата",
+      "advantages": [
+        "Безконтактен достъп",
+        "Интеграция с Home Assistant",
+        "Локален и офлайн контрол",
+        "Съвместим с всяко NFC устройство"
+      ],
+      "link": "https://github.com/PasevSU/HASS-Fingerbot-NFC.git",
+      "buttonText": "↪️ КЪМ ПРОЕКТА ▶️"
+    },
+    
+    // Проект 8: Eco
+    {
+      "id": 8,
+      "title": "🌿 Eco режим за термостати в Home Assistant",
+      "platforms": ["ha"],
+      "image": "static/img/eco_mod.png",
+      "imageAlt": "Еко режим термостат",
+      "advantages": [
+        "Спестяване на енергия",
+        "Комфорт без компромис",
+        "Лесна интеграция и персонализация"
+      ],
+      "link": "https://github.com/PasevSU/HASS-Eco-Mode.git",
+      "buttonText": "↪️ КЪМ ПРОЕКТА ▶️"
+    },
+    
+    // Проект 9: Away
+    {
+      "id": 9,
+      "title": "🔋 HASS-AWAY-MODE / AWAY MODE",
+      "platforms": ["ha"],
+      "image": "static/img/banner_away_mod.png",
+      "imageAlt": "Банер Away Mode",
+      "advantages": [
+        "Автоматизирано управление на away режима",
+        "Интеграция с Home Assistant",
+        "Гъвкави сценарии с input booleans"
+      ],
+      "link": "https://github.com/PasevSU/HASS-Away-Mode.git",
+      "buttonText": "↪️ КЪМ ПРОЕКТА ▶️"
+    },
+    
+    // Проект 10: Timer
+    {
+      "id": 10,
+      "title": "⏱️ Home Assistant - Гъвкава таймер автоматизация",
+      "platforms": ["ha"],
+      "image": "static/img/banner_flexible_taimer.png",
+      "imageAlt": "Банер гъвкав таймер",
+      "advantages": [
+        "Настройка на интервал чрез UI (часове, минути, секунди)",
+        "Изпълнява действия след изтичане на интервала",
+        "Предотвратява преждевременно задействане"
+      ],
+      "link": "https://github.com/PasevSU/HASS-Flexible-Timer.git",
+      "buttonText": "↪️ КЪМ ПРОЕКТА ▶️"
+    }
+];

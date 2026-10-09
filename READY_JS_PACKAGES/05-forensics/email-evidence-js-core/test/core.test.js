@@ -177,3 +177,26 @@ test('forensics CLI resolves relative input and output paths from the caller dir
     fs.rmSync(directory,{recursive:true,force:true});
   }
 });
+
+test('forensics CLI retains file hashing and source identity comparison',()=>{
+  const directory=fs.mkdtempSync(path.join(os.tmpdir(),'forensics-cli-source-'));
+  const packageDirectory=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..','..');
+  const cli=path.join(packageDirectory,'cli.js');
+  try {
+    const input=path.join(directory,'source.bin');
+    const identity=path.join(directory,'identity.json');
+    const bytes=Buffer.from('forensic source');
+    fs.writeFileSync(input,bytes);
+    fs.writeFileSync(identity,JSON.stringify({size:bytes.length,dev:1,ino:2,mtime_ns:3,ctime_ns:4,birthtime_ns:5}));
+
+    const hash=spawnSync(process.execPath,[cli,'sha256',input],{encoding:'utf8'});
+    assert.equal(hash.status,0,hash.stderr);
+    assert.equal(JSON.parse(hash.stdout).sha256,createHash('sha256').update(bytes).digest('hex'));
+
+    const comparison=spawnSync(process.execPath,[cli,'compare-identity',identity,identity],{encoding:'utf8'});
+    assert.equal(comparison.status,0,comparison.stderr);
+    assert.equal(JSON.parse(comparison.stdout).same,true);
+  } finally {
+    fs.rmSync(directory,{recursive:true,force:true});
+  }
+});

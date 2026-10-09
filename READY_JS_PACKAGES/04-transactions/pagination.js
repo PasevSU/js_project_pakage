@@ -1,0 +1,1 @@
+export class Pagination { constructor({pageSize=100}={}){this.pageSize=Math.min(100,Math.max(1,pageSize));this.page=1;} setPage(page){this.page=Math.max(1,Number(page)||1);return this.page;} totalPages(total){return Math.max(1,Math.ceil(total/this.pageSize));} }

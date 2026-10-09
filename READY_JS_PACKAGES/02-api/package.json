@@ -1,0 +1,19 @@
+{
+  "name": "pasevsu-api",
+  "private": true,
+  "type": "commonjs",
+  "main": "./index.js",
+  "exports": {
+    ".": {
+      "import": "./api.mjs",
+      "require": "./index.js"
+    },
+    "./api": "./api.mjs",
+    "./http": "./http.mjs",
+    "./browser": "./browser-index.mjs",
+    "./tsa-engine": "./tsa-engine.js"
+  },
+  "bin": {
+    "pasevsu-api": "./cli.js"
+  }
+}

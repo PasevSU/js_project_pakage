@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { createPdfReport } from './pdf-generator.js';
+import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
+import { createPdfReport } from './configured-pdf-generator.js';
 import { loadConfiguration } from './config.js';
 
 test('creates a PDF using the YAML page and timestamp settings', () => {
@@ -48,6 +50,35 @@ test('paginates body text instead of clipping it at the page bottom', () => {
       configuration
     });
     assert.ok(result.pages > 1);
+  } finally {
+    fs.rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+test('CLI preserves report validation and hashing alongside YAML PDF creation', () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'pdf-report-cli-'));
+  try {
+    const report = path.join(directory, 'report.json');
+    const output = path.join(directory, 'report.pdf');
+    fs.writeFileSync(report, JSON.stringify({
+      schema: 'evidence-report/1',
+      generatedAt: '2026-01-02T03:04:05Z',
+      application: { name: 'test' }
+    }));
+    const cli = fileURLToPath(new URL('./cli.js', import.meta.url));
+    const validate = spawnSync(process.execPath, [cli, 'validate', report], { encoding: 'utf8' });
+    assert.equal(validate.status, 0, validate.stderr);
+    assert.equal(JSON.parse(validate.stdout).valid, true);
+
+    const hash = spawnSync(process.execPath, [cli, 'hash', report], { encoding: 'utf8' });
+    assert.equal(hash.status, 0, hash.stderr);
+    assert.match(JSON.parse(hash.stdout).sha256, /^[0-9a-f]{64}$/);
+
+    const create = spawnSync(process.execPath, [
+      cli, 'create', '--text', 'CLI report body', '--output', output
+    ], { encoding: 'utf8' });
+    assert.equal(create.status, 0, create.stderr);
+    assert.ok(fs.existsSync(output));
   } finally {
     fs.rmSync(directory, { recursive: true, force: true });
   }

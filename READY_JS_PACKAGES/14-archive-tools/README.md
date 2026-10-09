@@ -1,0 +1,5 @@
+# Archive tools
+
+`cli.js verify <archive.json>` verifies an existing JSON archive. `cli.js check-builder` checks configuration and helper availability. `cli.js test` runs helper regression tests. `cli.js build --config <file>` runs the archive builder; review the target date range and network/OTS settings before starting.
+
+The builder uses the included Mempool API client, checkpoint persistence, archive-manifest writer, forensic logger, and optional Java OpenTimestamps CLI adapter. Copy `config.example.json` to `config.json`, choose a bounded `startDate`/`endDate`, and set `otsJarPath` only if Java OTS stamping is intended. The builder contacts the configured Mempool API and writes to `outputDir`/`logDir`; `--dry-run` still performs read-only network requests but does not write archive data.

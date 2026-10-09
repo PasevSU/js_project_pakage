@@ -1,0 +1,166 @@
+
+config_file:
+  name_file: "config.yaml"
+  loader: "loader.js"
+
+packages:
+  - crypto_package:
+    typ: "folder"
+    enable: true
+    patch: "pacage/crypto_package"
+    title: "Този раздел представлява папка с пакети за криптиране, декодиране, шифроване и тяхните компоненти. Разделенията са логически разделени на подпапки и файлове, които съдържат различни алгоритми и методи за криптографска обработка на данни. Всеки пакет има свои собствени настройки и компоненти, които могат да бъдат активирани или деактивирани според нуждите на потребителя."
+    theme:
+      - "Криптография"
+      - "Сигурност"
+      - "Шифроване"
+      - "Хеширане"
+    package:
+      - CRC_sum:
+        typ: "folder"
+        enable: true
+        title: "Този раздел представлява подпапка която съдържа контролните и заедно с имената на пакета."
+        manifest_file:
+          - enable: false
+          - patch: "./manifest/valueas_algorithmus.json"
+          - title: "Манифеста е комбинация от полулярно прилаганите манифести към проекти."
+      - encrypt:
+        typ: "folder"
+        enable: true
+        title:
+        manifest_file:
+          - enable: false
+          - patch:
+      - ots:
+        enable: true
+        title:
+        manifest_file:
+          - enable: false
+          - patch:
+        components:
+          index:
+            - ots-cli.js
+          timestamp:
+            - detached-timestamp-file.js
+            - open-timestamps.js
+            - timestamp.js
+          server:
+            - bitcoin.js
+            - calendar.js
+            - context.js
+          settings:
+            - esplora.js
+            - extend-error.js
+            - merkle.js
+            - notary.js
+            - ops.js
+            - utils.js
+      - pgp:
+        enable: true
+        title:
+        manifest_file:
+          - enable: false
+          - patch:
+  - language:
+    typ: "folder"
+    language_pack:
+      - BG:
+        type: "json"
+        file_name: "bg.json"
+      - DE:
+
+
+
+
+
+aes-profile.js
+aes-test.js
+aes.js
+blowfish-test.js
+blowfish.js
+cipher-core.js
+cipher-test.js
+config-test.js
+core.js
+des-profile.js
+des-test.js
+evpkdf-profile.js
+evpkdf-test.js
+evpkdf.js
+format-hex.js
+format-openssl-test.js
+hmac-md5-profile.js
+hmac-md5-test.js
+hmac-sha224-test.js
+hmac-sha256-test.js
+hmac-sha384-test.js
+hmac-sha512-test.js
+hmac.js
+kdf-openssl-test.js
+lib-base-test.js
+lib-cipherparams-test.js
+lib-passwordbasedcipher-test.js
+lib-serializablecipher-test.js
+lib-typedarrays-test.js
+lib-typedarrays.js
+lib-wordarray-test.js
+md5-profile.js
+md5-test.js
+md5.js
+mode-cbc-test.js
+mode-cfb-test.js
+mode-cfb.js
+mode-ctr-gladman.js
+mode-ctr-test.js
+mode-ctr.js
+mode-ecb-test.js
+mode-ecb.js
+mode-ofb-test.js
+mode-ofb.js
+pad-ansix923-test.js
+pad-ansix923.js
+pad-iso10126-test.js
+pad-iso10126.js
+pad-iso97971-test.js
+pad-iso97971.js
+pad-nopadding.js
+pad-pkcs7-test.js
+pad-zeropadding-test.js
+pad-zeropadding.js
+pakage.yaml
+pbkdf2-profile.js
+pbkdf2-test.js
+pbkdf2.js
+rabbit-legacy-test.js
+rabbit-legacy.js
+rabbit-profile.js
+rabbit-test.js
+rabbit.js
+rc4-profile.js
+rc4-test.js
+rc4.js
+READEME.MD
+README.MD.txt
+ripemd160-test.js
+ripemd160.js
+sha1-profile.js
+sha1-test.js
+sha1.js
+sha224-test.js
+sha224.js
+sha256-profile.js
+sha256-test.js
+sha256.js
+sha3-profile.js
+sha3-test.js
+sha3.js
+sha384-test.js
+sha384.js
+sha512-profile.js
+sha512-test.js
+sha512.js
+tripledes-profile.js
+tripledes-test.js
+tripledes.js
+x64-core.js
+x64-word-test.js
+x64-wordarray-test.js
