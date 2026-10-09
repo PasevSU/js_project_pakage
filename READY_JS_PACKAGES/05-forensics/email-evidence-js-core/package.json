@@ -13,7 +13,6 @@
   },
   "scripts": {
     "test": "node --test",
-    "build:sample": "node bin/build-email-json.mjs",
     "audit": "node bin/audit.mjs"
   },
   "engines": { "node": ">=20" }

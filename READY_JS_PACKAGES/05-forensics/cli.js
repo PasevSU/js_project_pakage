@@ -21,7 +21,7 @@ if (!['build-email', 'test', 'audit'].includes(command)) {
 }
 
 const scriptArguments = command === 'build-email'
-  ? [path.join(packageDirectory, 'bin', 'build-email-json.mjs'), ...args]
+  ? [path.join(packageDirectory, 'bin', 'build-email-json.mjs'), ...args.map((value, index) => index < 2 && !path.isAbsolute(value) ? path.resolve(value) : value)]
   : command === 'test'
     ? ['--test']
     : [path.join(packageDirectory, 'bin', 'audit.mjs')];

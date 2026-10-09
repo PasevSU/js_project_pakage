@@ -22,10 +22,32 @@ test('creates a PDF using the YAML page and timestamp settings', () => {
     assert.equal(result.output, output);
     assert.ok(result.bytes > 100);
     assert.equal(bytes.subarray(0, 5).toString(), '%PDF-');
+    const pdfText = bytes.toString('latin1');
+    assert.match(pdfText, /MediaBox \[0 0 595\.\d+ 841\.\d+\]/);
+    assert.match(pdfText, /Generated: Jan 2, 2026, 3:04:05 AM/);
     assert.throws(
       () => createPdfReport({ title: 'Test report', text: 'Report body', output }),
       /already exists/
     );
+  } finally {
+    fs.rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+test('paginates body text instead of clipping it at the page bottom', () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'pdf-report-pages-'));
+  try {
+    const configuration = structuredClone(loadConfiguration());
+    configuration.settings.marginMm = 12;
+    configuration.settings.fontSizePt = 12;
+    configuration.settings.includeTimestamp = false;
+    const result = createPdfReport({
+      title: 'Long report',
+      text: Array(2000).fill('Evidence detail line.').join('\n'),
+      output: path.join(directory, 'long-report.pdf'),
+      configuration
+    });
+    assert.ok(result.pages > 1);
   } finally {
     fs.rmSync(directory, { recursive: true, force: true });
   }

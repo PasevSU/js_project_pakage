@@ -4,6 +4,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { buildEmailEvidence } from '../src/email/build_email_evidence.js';
 import { getEmailEvidenceOptions } from '../src/core/config.js';
+import { atomicWriteReplace } from '../src/core/utils.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const functionDir=path.join(root,'src/functions');
 const modules=fs.readdirSync(functionDir).filter(x=>x.endsWith('.js')).sort();
@@ -42,6 +43,6 @@ const report={
   },
   release_gate:'BLOCKED_UNTIL_ALL_REQUIRED_EXTERNAL_ENGINE_CHECKS_PASS'
 };
-fs.writeFileSync(path.join(root,'audit_report.json'),JSON.stringify(report,null,2)+'\n');
+atomicWriteReplace(path.join(root,'audit_report.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({status:report.status,inventory:report.checks.function_inventory.status,tests:report.checks.node_tests.status,sample_eml:report.checks.sample_eml.status,external_not_verified:external.length,report:'audit_report.json'},null,2));
-process.exit(testRun.status===0&&inventoryPass?0:1);
+process.exit(testRun.status===0&&inventoryPass&&report.checks.sample_eml.status==='PASS'?0:1);

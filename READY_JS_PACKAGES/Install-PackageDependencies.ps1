@@ -38,8 +38,20 @@ function Test-DependencyInstalled {
     $boundary = Split-Path -Parent ([IO.Path]::GetFullPath($PackageRoot))
 
     while ($directory.StartsWith($boundary, [StringComparison]::OrdinalIgnoreCase)) {
-        if (Test-Path -LiteralPath (Join-Path (Join-Path $directory 'node_modules') $relativeName)) {
-            return $true
+        $installedDirectory = Join-Path (Join-Path $directory 'node_modules') $relativeName
+        $installedManifest = Join-Path $installedDirectory 'package.json'
+        if (Test-Path -LiteralPath $installedManifest -PathType Leaf) {
+            try {
+                $installed = Get-Content -LiteralPath $installedManifest -Raw | ConvertFrom-Json
+                if ($installed.name -eq $Name -and -not [string]::IsNullOrWhiteSpace([string]$installed.version)) {
+                    if (-not $installed.main -or (Test-Path -LiteralPath (Join-Path $installedDirectory ([string]$installed.main)) -PathType Leaf)) {
+                        return $true
+                    }
+                }
+            }
+            catch {
+                return $false
+            }
         }
         if ($directory.Equals($boundary, [StringComparison]::OrdinalIgnoreCase)) {
             break
@@ -78,7 +90,7 @@ try {
     }
     if ($installSettings.enabled -eq $false) {
         Write-Host "Dependency installation is disabled in configuration.yaml for '$root'."
-        return 0
+        exit 0
     }
     $includeDevDependencies = $installSettings.includeDevDependencies -ne $false
     $installMode = [string]$installSettings.installMode
@@ -99,7 +111,7 @@ try {
 
     if ($manifests.Count -eq 0) {
         Write-Host "No package.json found under '$root'; nothing to install."
-        return 0
+        exit 0
     }
 
     $failureCount = 0
@@ -115,16 +127,6 @@ try {
                 continue
             }
 
-            $missing = @(
-                $dependencies | Where-Object {
-                    -not (Test-DependencyInstalled -Name $_ -ManifestDirectory $manifestDirectory -PackageRoot $root)
-                }
-            )
-            if ($missing.Count -eq 0) {
-                Write-Host "Dependencies present: $($manifestFile.FullName)"
-                continue
-            }
-
             $manager = [string]$installSettings.packageManager
             if (-not $manager -or $manager -eq 'auto') {
                 $manager = Get-PackageManager -Manifest $manifest -ManifestDirectory $manifestDirectory
@@ -135,6 +137,32 @@ try {
             $command = Get-Command $manager -ErrorAction SilentlyContinue
             if ($null -eq $command) {
                 throw "Package manager '$manager' is not installed or is not on PATH."
+            }
+
+            $missing = @(
+                $dependencies | Where-Object {
+                    -not (Test-DependencyInstalled -Name $_ -ManifestDirectory $manifestDirectory -PackageRoot $root)
+                }
+            )
+            $invalidVersionTree = $false
+            if ($missing.Count -eq 0) {
+                Push-Location -LiteralPath $manifestDirectory
+                try {
+                    switch ($manager) {
+                        'npm' { $null = & $command.Source ls --depth=0 --json 2>$null }
+                        'pnpm' { $null = & $command.Source list --depth=0 --json 2>$null }
+                        'yarn' { $null = & $command.Source check --integrity 2>$null }
+                    }
+                    $invalidVersionTree = $LASTEXITCODE -ne 0
+                }
+                finally {
+                    Pop-Location
+                }
+            }
+            $forceInstall = $installMode -in @('ci', 'frozen') -or $invalidVersionTree
+            if ($missing.Count -eq 0 -and -not $forceInstall) {
+                Write-Host "Dependencies present: $($manifestFile.FullName)"
+                continue
             }
 
             Write-Host "Installing missing dependencies for $($manifestFile.FullName): $($missing -join ', ')"
@@ -188,11 +216,11 @@ try {
     }
 
     if ($failureCount -gt 0) {
-        return 1
+        exit 1
     }
-    return 0
+    exit 0
 }
 catch {
     [Console]::Error.WriteLine($_.Exception.Message)
-    return 1
+    exit 1
 }
