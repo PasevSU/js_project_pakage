@@ -27,6 +27,7 @@ metadata are intentionally excluded.
 | `15-openpgpjs` | Preserved upstream OpenPGP.js source and project CLI |
 | `16-mempool-js` | Preserved upstream Mempool.js source and project CLI |
 | `17-javascript-opentimestamps` | Preserved upstream OpenTimestamps 0.4.9 source |
+| `18-repo-manager` | JavaScript project scaffolding, GitHub publishing, and safe repository synchronization |
 | `90-legacy-pakages` | Read-only historical CryptoJS, OTS, and PGP archive |
 
 `15-openpgpjs`, `16-mempool-js`, and `17-javascript-opentimestamps` preserve
@@ -79,6 +80,7 @@ Run a package CLI from the repository root with
 | `15-openpgpjs` | `keygen`, `inspect`, `encrypt`, `decrypt`, `sign`, `verify`, `self-test` |
 | `16-mempool-js` | `fees`, `address`, `transaction`, `block` |
 | `17-javascript-opentimestamps` | Upstream `info`, `stamp`, `verify`, `upgrade` |
+| `18-repo-manager` | `create`, `publish`, `update`, `push`, `sync` |
 | `90-legacy-pakages` | Read-only `list`, `inspect` |
 
 The OpenPGP.js and Mempool.js compiled outputs are included in this snapshot.
