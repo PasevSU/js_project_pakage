@@ -110,3 +110,9 @@ services; local tests and inspection commands do not.
 The package-specific README files describe integration details and runtime
 requirements. The JSON inventory is generated from the sorted package tree;
 refresh it after adding or removing package files.
+
+Run `node READY_JS_PACKAGES/13-tests/cli.js run` to execute the local
+regression suite. It also checks that every package group is inventoried and
+has a loadable configuration, dependency installers, and a working CLI help
+entry point, and it exercises digest vectors and nested build-module
+dependency resolution.

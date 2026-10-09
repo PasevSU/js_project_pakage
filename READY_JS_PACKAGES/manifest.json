@@ -1,6 +1,6 @@
 {
   "source": "_js_project_pak/new",
-  "file_count": 1040,
+  "file_count": 1043,
   "groups": {
     "01-core": [
       "advanced-core.js",
@@ -154,10 +154,10 @@
       "pad-nopadding.js",
       "pad-zeropadding.js",
       "pbkdf2.js",
+      "README.md",
       "rabbit-legacy.js",
       "rabbit.js",
       "rc4.js",
-      "README.md",
       "ripemd160.js",
       "sha1.js",
       "sha224.js",
@@ -299,6 +299,7 @@
       "aes-test.js",
       "blowfish-test.js",
       "cipher-test.js",
+      "cli-build.test.js",
       "cli.js",
       "cmac-padding.test.js",
       "config-test.js",
@@ -308,6 +309,7 @@
       "forensics-parser.test.js",
       "format-openssl-test.js",
       "get-configuration.ps1",
+      "hash-crypto.test.js",
       "hmac-md5-profile.js",
       "hmac-md5-test.js",
       "hmac-sha224-test.js",
@@ -335,6 +337,7 @@
       "pad-iso97971-test.js",
       "pad-pkcs7-test.js",
       "pad-zeropadding-test.js",
+      "package-integrity.test.js",
       "pbkdf2-profile.js",
       "pbkdf2-test.js",
       "pdf-report.test.js",

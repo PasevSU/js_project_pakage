@@ -1012,7 +1012,7 @@ export default () => describe('Streaming', function() {
     const __filename = fileURLToPath(import.meta.url);
 
     it('Node: Encrypt and decrypt text message roundtrip', async function() {
-      const plaintext = fs.readFileSync(__filename.replace('streaming.js', 'openpgp.js'), 'utf8');
+      const plaintext = fs.readFileSync(__filename.replace('streaming.js', 'openpgp.js'), 'utf8').replace(/\r\n/g, '\n');
       const data = NodeReadableStream.toWeb(fs.createReadStream(__filename.replace('streaming.js', 'openpgp.js'), { encoding: 'utf8' }));
       const encrypted = await openpgp.encrypt({
         message: await openpgp.createMessage({ text: data }),
