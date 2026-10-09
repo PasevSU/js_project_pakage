@@ -40,6 +40,8 @@ function loadReportEngine(readyState='loading') {
     setProperties() {}
     setFont() {}
     setFontSize() {}
+    setTextColor() {}
+    setDrawColor() {}
     text(value) { this.textCalls.push(value); }
     splitTextToSize(value) { return [String(value)]; }
     addPage() {}
@@ -50,8 +52,11 @@ function loadReportEngine(readyState='loading') {
     save() { this.saved=true; }
   }
   const window={jspdf:{jsPDF:FakePdf}};
+  const context={document,window,crypto:crypto.webcrypto,TextEncoder,Uint8Array,btoa,Blob,URL,Date,Math,Promise,JSON,String,Boolean,Object,Set,Error};
+  const style=fs.readFileSync(path.join(__dirname,'../08-pdf-report/pdf-style-standard.js'),'utf8');
   const source=fs.readFileSync(path.join(__dirname,'../08-pdf-report/report-engine.js'),'utf8');
-  vm.runInNewContext(source,{document,window,crypto:crypto.webcrypto,TextEncoder,Uint8Array,btoa,Blob,URL,Date,Math,Promise,JSON,String,Boolean,Object,Set,Error});
+  vm.runInNewContext(style,context);
+  vm.runInNewContext(source,context);
   if(ready) ready();
   return {api:window.PasevSUReportEngine,controls,parent,FakePdf};
 }
@@ -88,4 +93,77 @@ test('rejects a file that is not a TrueType font',async()=>{
 test('initializes report controls when loaded after DOMContentLoaded',()=>{
   const {parent}=loadReportEngine('complete');
   assert.equal(parent.children.length,1);
+});
+
+test('styles legacy browser reports with the shared legal panel, QR, and page footer',async()=>{
+  const reportRoot={innerHTML:''};
+  const footerTexts=[];
+  const pdf={
+    internal:{
+      getNumberOfPages:()=>2,
+      pageSize:{getWidth:()=>210,getHeight:()=>297}
+    },
+    setPage(){},
+    setFontSize(){},
+    setTextColor(){},
+    text(value){footerTexts.push(value);}
+  };
+  let options;
+  let qrPayload='';
+  const worker={
+    set(value){options=value;return this;},
+    from(element){assert.equal(element,reportRoot);return this;},
+    toPdf(){return this;},
+    get(name){assert.equal(name,'pdf');return Promise.resolve(pdf);},
+    save(){return Promise.resolve();}
+  };
+  const window={
+    qrcode(){
+      return {
+        addData(value){qrPayload=value;},
+        make(){},
+        getModuleCount(){return 3;},
+        isDark(row,column){return (row+column)%2===0;}
+      };
+    }
+  };
+  const context={
+    window,
+    courtReport:reportRoot,
+    html2pdf:()=>worker,
+    showToast(){},
+    Date,
+    JSON,
+    String,
+    Number,
+    Array,
+    Promise,
+    setTimeout,
+    document:{},
+    console
+  };
+  vm.runInNewContext(
+    fs.readFileSync(path.join(__dirname,'../08-pdf-report/pdf-style-standard.js'),'utf8'),
+    context
+  );
+  vm.runInNewContext(
+    fs.readFileSync(path.join(__dirname,'../08-pdf-report/pdf-generator.js'),'utf8'),
+    context
+  );
+  await context.generatePDFReport({
+    reportId:'RPT-TEST',
+    stats:{found:1,total:1,score:100},
+    summary:{verdict:'VERIFIED'},
+    ots:{status:'VERIFIED',sha256:'a'.repeat(64)},
+    blockchain:[],
+    evidence:{description:'Local test only.',level:'TECHNICAL',value:'1/1'}
+  });
+  assert.match(reportRoot.innerHTML,/pdf-legal-qr/);
+  assert.match(reportRoot.innerHTML,/data:image\/svg\+xml/);
+  assert.match(qrPayload,/Rechtliche und technische Hinweise/);
+  assert.match(qrPayload,/SHA-256: a{64}/);
+  assert.deepEqual(Array.from(options.margin),[20,20,35,20]);
+  assert.equal(options.jsPDF.format,'a4');
+  assert.ok(footerTexts.includes('1 / 2'));
+  assert.ok(footerTexts.includes('2 / 2'));
 });

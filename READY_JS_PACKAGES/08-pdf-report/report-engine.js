@@ -5,10 +5,19 @@
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
+  const STANDARD = globalThis.PasevSUPdfStandard;
+  if (!STANDARD) throw new Error('Load pdf-style-standard.js before report-engine.js.');
   let lastCanonical = null;
   let unicodeFont = null;
 
-  const MARGINS = Object.freeze({ left:20, right:20, top:25, bottom:15, header:16, footer:11 });
+  const MARGINS = Object.freeze({
+    left: STANDARD.page.marginsMm.left,
+    right: STANDARD.page.marginsMm.right,
+    top: STANDARD.page.marginsMm.top + 5,
+    bottom: STANDARD.page.marginsMm.bottom - 11,
+    header: STANDARD.page.marginsMm.top - 4,
+    footer: 11
+  });
   const enc = new TextEncoder();
   const hex = bytes => Array.from(new Uint8Array(bytes), b => b.toString(16).padStart(2,'0')).join('');
   async function digest(algorithm, text) { return hex(await crypto.subtle.digest(algorithm, enc.encode(text))); }
@@ -144,7 +153,13 @@
       const Ctor = jsPdfCtor(); if (!Ctor) throw new Error('jsPDF runtime is not loaded. Run vendor setup first.');
       const canonical = await currentSnapshot(); const lang = language();
       if (lang==='bg' && !unicodeFont) throw new Error('Select a Unicode TrueType (.ttf) font before generating a Bulgarian PDF.');
-      const L = labels(lang); const doc = new Ctor({ orientation:'portrait', unit:'mm', format:'a4', compress:true, putOnlyUsedFonts:true });
+      const L = labels(lang); const doc = new Ctor({
+        orientation:STANDARD.page.orientation,
+        unit:STANDARD.page.unit,
+        format:STANDARD.page.format,
+        compress:true,
+        putOnlyUsedFonts:true
+      });
       const fontName=unicodeFont?'PasevSUUnicode':'helvetica';
       if(unicodeFont) {
         doc.addFileToVFS('PasevSUUnicode.ttf',unicodeFont);
@@ -157,20 +172,40 @@
       const pageIds = [];
       const text = s => fontName==='PasevSUUnicode'?String(s??''):pdfSafe(s);
       const ensure = h => { if (y + h > pageH - MARGINS.bottom - MARGINS.footer) { doc.addPage(); y = MARGINS.top + 3; } };
-      const heading = title => { ensure(12); doc.setFont(fontName,'bold'); doc.setFontSize(13); doc.text(text(title), MARGINS.left, y); y += 7; doc.setFont(fontName,'normal'); };
+      const heading = title => {
+        ensure(12);
+        doc.setFont(fontName,'bold');
+        doc.setFontSize(STANDARD.fonts.sizesPt.heading);
+        doc.setTextColor(...rgb(STANDARD.colors.accent));
+        doc.text(text(title), MARGINS.left, y);
+        y += 7;
+        doc.setFont(fontName,'normal');
+      };
       const line = (label, value) => {
-        const raw = `${label}: ${stringifyCompact(value)}`; const lines = doc.splitTextToSize(text(raw), contentW); ensure(lines.length*4.4+2); doc.setFontSize(8.5); doc.text(lines, MARGINS.left, y); y += lines.length*4.4 + 1.2;
+        const raw = `${label}: ${stringifyCompact(value)}`; const lines = doc.splitTextToSize(text(raw), contentW); ensure(lines.length*4.4+2);         doc.setFontSize(STANDARD.fonts.sizesPt.body);
+        doc.setTextColor(...rgb(STANDARD.colors.ink));
+        doc.text(lines, MARGINS.left, y);
+        y += lines.length*STANDARD.fonts.leadingPt.body*25.4/72 + 1.2;
       };
       const jsonBlock = (title, value) => {
         if (!value) return; heading(title); const raw = JSON.stringify(value, null, 2).split('\n');
-        doc.setFont(unicodeFont?fontName:'courier','normal'); doc.setFontSize(6.7);
+        doc.setFont(unicodeFont?fontName:'courier','normal'); doc.setFontSize(STANDARD.fonts.sizesPt.tableHash);
         for (const sourceLine of raw) { const lines = doc.splitTextToSize(text(sourceLine), contentW); ensure(lines.length*3.2+1); doc.text(lines, MARGINS.left, y); y += lines.length*3.2; }
         doc.setFont(fontName,'normal'); y += 2;
       };
 
-      doc.setFont(fontName,'bold'); doc.setFontSize(18); doc.text(text(L.title), MARGINS.left, y); y += 10;
-      doc.setFont(fontName,'normal'); doc.setFontSize(8.5); const noteLines=doc.splitTextToSize(text(L.note), contentW-32); doc.text(noteLines,MARGINS.left,y);
-      const qr = await qrMatrix(`${canonical.reportId}\nSHA256:${canonical.sha256}`); if (qr) drawQr(doc,qr,pageW-MARGINS.right-28,y-5,28);
+      doc.setFont(fontName,'bold'); doc.setFontSize(STANDARD.fonts.sizesPt.title); doc.setTextColor(...rgb(STANDARD.colors.accent)); doc.text(text(L.title), MARGINS.left, y); y += 10;
+      doc.setFont(fontName,'normal'); doc.setFontSize(STANDARD.fonts.sizesPt.legal); doc.setTextColor(...rgb(STANDARD.colors.ink));
+      const qrSize = STANDARD.components.qrSizeMm;
+      const noteLines=doc.splitTextToSize(text(L.note), contentW-qrSize-4); doc.text(noteLines,MARGINS.left,y);
+      const qrPayload = [
+        canonical.reportId,
+        `SHA256:${canonical.sha256}`,
+        STANDARD.labels.legalHeading,
+        ...STANDARD.legalNotice
+      ].join('\n');
+      const qr = await qrMatrix(qrPayload);
+      if (qr) drawQr(doc,qr,pageW-MARGINS.right-qrSize,y-5,qrSize);
       y += Math.max(17, noteLines.length*4.2+3);
       heading(L.overview); line(L.generated, canonical.payload.generatedAt); line(L.reportId, canonical.reportId); line('Schema', canonical.payload.schema);
       jsonBlock(L.providers, canonical.payload.runtime);
@@ -182,14 +217,22 @@
       const pages = doc.getNumberOfPages();
       for (let p=1;p<=pages;p++) pageIds[p-1] = await digest('SHA-512', `${canonical.sha512}|page:${p}|pages:${pages}|${canonical.reportId}`);
       for (let p=1;p<=pages;p++) {
-        doc.setPage(p); doc.setDrawColor(180); doc.line(MARGINS.left, MARGINS.header, pageW-MARGINS.right, MARGINS.header);
-        doc.setFont(fontName,'normal'); doc.setFontSize(6.5); doc.text(text(`PasevSU PGP Toolbox 2.1.1 · ${canonical.reportId}`),MARGINS.left,10);
+        doc.setPage(p);
+        doc.setDrawColor(...rgb(STANDARD.colors.grid));
+        doc.line(MARGINS.left, MARGINS.header, pageW-MARGINS.right, MARGINS.header);
+        doc.setFont(fontName,'normal');
+        doc.setFontSize(STANDARD.fonts.sizesPt.footer);
+        doc.setTextColor(...rgb(STANDARD.colors.muted));
+        doc.text(text(`PasevSU PGP Toolbox 2.1.1 · ${canonical.reportId}`),MARGINS.left,10);
         doc.line(MARGINS.left,pageH-MARGINS.footer,pageW-MARGINS.right,pageH-MARGINS.footer);
-        doc.setFontSize(6.2); doc.text(text(`${L.page} ${p}/${pages}`),MARGINS.left,pageH-6);
+        doc.setFontSize(STANDARD.fonts.sizesPt.footer);
+        doc.text(text(`${L.page} ${p}/${pages}`),MARGINS.left,pageH-6);
         const pid = `${L.pageId}: ${pageIds[p-1]}`; doc.setFontSize(5.2); const pidLines=doc.splitTextToSize(text(pid),contentW-25).slice(0,2); doc.text(pidLines,MARGINS.left+25,pageH-9,{align:'left'});
       }
       doc.save(`PasevSU_OpenPGP_Report_${canonical.reportId}.pdf`);
-      if (status) status.textContent = `PDF generated · ${canonical.reportId} · SHA-256 ${canonical.sha256}`;
+      if (status) {
+        status.textContent = `PDF generated · ${canonical.reportId} · SHA-256 ${canonical.sha256}${qr ? '' : ' · QR provider unavailable'}`;
+      }
     } catch (error) { if (status) status.textContent = `Report generation failed: ${error.message}`; }
     finally { if (button) button.disabled=false; }
   }
@@ -204,4 +247,11 @@
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true});
   else init();
   window.PasevSUReportEngine={ collect, buildCanonical, currentSnapshot, resetSnapshot, generatePdf, get last(){return lastCanonical;}, get unicodeFontLoaded(){return Boolean(unicodeFont);}, margins:MARGINS };
+  function rgb(hexColor) {
+    return [
+      Number.parseInt(hexColor.slice(1,3),16),
+      Number.parseInt(hexColor.slice(3,5),16),
+      Number.parseInt(hexColor.slice(5,7),16)
+    ];
+  }
 })();

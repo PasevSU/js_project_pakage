@@ -20,6 +20,9 @@ export function loadConfiguration(file = path.join(packageDirectory, 'configurat
   if (typeof settings.locale !== 'string' || !settings.locale) {
     throw new TypeError('settings.locale must be a locale identifier.');
   }
+  if (typeof settings.timeZone !== 'string' || !settings.timeZone) {
+    throw new TypeError('settings.timeZone must be a time zone identifier.');
+  }
   if (!Number.isFinite(settings.marginMm) || settings.marginMm < 0) {
     throw new TypeError('settings.marginMm must be a non-negative number.');
   }

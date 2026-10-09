@@ -1,6 +1,6 @@
 {
   "source": "_js_project_pak/new",
-  "file_count": 1039,
+  "file_count": 1040,
   "groups": {
     "01-core": [
       "advanced-core.js",
@@ -209,6 +209,7 @@
       "package-lock.json",
       "package.json",
       "pdf-generator.js",
+      "pdf-style-standard.js",
       "README.md",
       "report-engine.js",
       "test.test.js"
