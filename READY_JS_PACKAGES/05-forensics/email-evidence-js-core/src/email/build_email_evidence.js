@@ -24,6 +24,7 @@ export function buildEmailEvidence(bytes,{filename=null,evidenceId=null,maxEmail
   m.hashes.email_metadata_sha256=sha256Stable({message:parsed.message,thread:parsed.thread,transport:parsed.transport,authentication:parsed.authentication,mime_summary:{part_count:parsed.mime.part_count,text_part_count:parsed.mime.text_part_count,attachment_count:parsed.mime.attachment_count}});
   if (!includeDecodedBody) {
     m.email.content.decoded_text = null;
+    m.email.thread.quoted = { messages: [], forwarded_markers: [] };
     const pending = [m.email.mime.root];
     while (pending.length) {
       const part = pending.pop();

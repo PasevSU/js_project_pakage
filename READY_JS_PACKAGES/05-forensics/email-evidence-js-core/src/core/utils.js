@@ -1,7 +1,48 @@
 import crypto from 'node:crypto';
+import fs from 'node:fs';
+import path from 'node:path';
 
 export function invariant(condition, message) {
   if (!condition) throw new Error(message);
+}
+
+export function assertUniqueObjectId(manifest, objectId) {
+  invariant(objectId, 'object_id required');
+  invariant(!manifest.objects.some(object => object.object_id === objectId), `duplicate object_id ${objectId}`);
+}
+
+export function atomicWriteNew(file, bytes, mode = 0o600) {
+  const target = path.resolve(file);
+  fs.mkdirSync(path.dirname(target), { recursive: true });
+  const temporary = path.join(path.dirname(target), `.${path.basename(target)}.${process.pid}.${crypto.randomBytes(8).toString('hex')}.tmp`);
+  try {
+    fs.writeFileSync(temporary, bytes, { flag: 'wx', mode });
+    fs.linkSync(temporary, target);
+    return target;
+  } finally {
+    try {
+      fs.unlinkSync(temporary);
+    } catch (error) {
+      if (error.code !== 'ENOENT') throw error;
+    }
+  }
+}
+
+export function atomicWriteReplace(file, bytes, mode = 0o600) {
+  const target = path.resolve(file);
+  fs.mkdirSync(path.dirname(target), { recursive: true });
+  const temporary = path.join(path.dirname(target), `.${path.basename(target)}.${process.pid}.${crypto.randomBytes(8).toString('hex')}.tmp`);
+  try {
+    fs.writeFileSync(temporary, bytes, { flag: 'wx', mode });
+    fs.renameSync(temporary, target);
+    return target;
+  } finally {
+    try {
+      fs.unlinkSync(temporary);
+    } catch (error) {
+      if (error.code !== 'ENOENT') throw error;
+    }
+  }
 }
 
 export function clone(value) {
